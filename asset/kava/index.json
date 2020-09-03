@@ -1,1 +1,1 @@
-{"chainId": "", "asset": "KAVA", "name": "Kava.io"}
+{"symbol": "KAVA", "name": "Kava.io", "caip-20": "", "iov-name-service-uri": "asset:kava"}

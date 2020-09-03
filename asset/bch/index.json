@@ -1,1 +1,1 @@
-{"chainId": "", "asset": "BCH", "name": "Bitcoin Cash"}
+{"symbol": "BCH", "name": "Bitcoin Cash", "caip-20": "", "iov-name-service-uri": "asset:bch"}
