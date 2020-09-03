@@ -48,12 +48,9 @@ def matches_available_chains(d):
   return False
 
 def create_data(data):
-  path = os.path.join(parent_dir, data['symbol'].lower())
-  if not os.path.exists(path):
-    os.mkdir(path)
   data_json = json.dumps(data)
   print(data_json)
-  with open(os.path.join(path,'index.json'), 'w') as fp:
+  with open(os.path.join(parent_dir,data['symbol'].lower()+'.json'), 'w') as fp:
     fp.write(data_json)
     print('Created index.json for', data['symbol'])
 
