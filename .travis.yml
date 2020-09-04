@@ -6,4 +6,4 @@ before_install:
   - pip install -U pip
 install:
   - pip install -r scripts/requirements.txt # install packages
-script: python script/check.py
+script: python scripts/check.py
