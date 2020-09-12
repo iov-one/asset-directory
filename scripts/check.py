@@ -18,6 +18,8 @@ for file in os.listdir(parent_dir):
     d = json.load(f)
     check_format(d)
     asset = file[:-5]
+    if asset == 'asset':
+      continue
     if d['symbol'].lower() != asset:
       error()
     if d['iov-name-service-uri'] != ('asset:'+asset):
