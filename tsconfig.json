@@ -5,7 +5,8 @@
       "declaration": true,
       "outDir": "./lib",
       "strict": true,
-      "resolveJsonModule": true
+      "resolveJsonModule": true,
+      "lib": ["es6", "dom"]
     },
     "include": ["src"],
     "exclude": ["node_modules", "**/__tests__/*"]

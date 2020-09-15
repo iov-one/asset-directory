@@ -5,7 +5,7 @@
   "main": "lib/src/index.js",
   "scripts": {
     "test": "mocha -r ts-node/register src/**/*.test.ts",
-    "build": "tsc",
+    "build": "node combine.js && tsc",
     "lint": "tslint -p tsconfig.json"
   },
   "repository": {
