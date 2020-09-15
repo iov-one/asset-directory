@@ -17,8 +17,6 @@ for file in os.listdir(parent_dir):
   with open(os.path.join(parent_dir, file), "r") as f:
     d = json.load(f)
     asset = file[:-5]
-    if asset == 'asset':
-      continue
     check_format(d)
     if d['symbol'].lower() != asset:
       error()

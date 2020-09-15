@@ -1,4 +1,4 @@
-import * as data from "../asset/asset.json";
+import * as data from "../asset.json";
 
 export interface AssetChain {
   symbol: string;
@@ -7,7 +7,7 @@ export interface AssetChain {
   iovNameServiceUri: string;
 }
 
-export var getChains = (): AssetChain[] => {
+export const getChains = (): AssetChain[] => {
   let assetChains: AssetChain[] = [];
   data.forEach((d) => {
     const assetChain: AssetChain = {
