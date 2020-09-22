@@ -3,6 +3,8 @@ const path = require( "path" );
 
 
 let error = false;
+
+const assets = {};
 const props = [
    "caip-20",
    "iov-name-service-uri",
@@ -22,10 +24,19 @@ fs.readdirSync( "." ).forEach( file => {
       }
    } );
 
-   if ( o["iov-name-service-uri"] != `asset:${o.symbol.toLowerCase()}` ) {
+   const symbol = o.symbol.toLowerCase();
+
+   if ( o["iov-name-service-uri"] != `asset:${symbol}` ) {
       error = true;
-      console.error( `Invalid uri of '${o["iov-name-service-uri"]}'; should be 'asset:${o.symbol.toLowerCase()}'.` );
+      console.error( `Invalid uri of '${o["iov-name-service-uri"]}' in ${file}; should be 'asset:${symbol}'.` );
    }
+
+   if ( assets[symbol] ) {
+      error = true;
+      console.error( `Duplicate symbol '${o.symbol}' in ${file}'.` );
+   }
+
+   assets[symbol] = true;
 } );
 
 process.exit( error ? -1 : 0 );
