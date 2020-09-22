@@ -17,6 +17,7 @@
    },
    "scripts": {
       "aggregate": "node aggregate.js",
+      "add-asset": "node asset.js",
       "format": "node format.js",
       "verify": "node verify.js"
    }
