@@ -12,10 +12,11 @@
    "husky": {
       "hooks": {
          "pre-commit": "yarn verify && yarn format",
-         "pre-push": "yarn"
+         "pre-push": "yarn veryify && yarn aggregate"
       }
    },
    "scripts": {
+      "aggregate": "node aggregate.js",
       "format": "node format.js",
       "verify": "node verify.js"
    }
