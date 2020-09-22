@@ -1,9 +1,0 @@
-language: python
-python:
-  - 3.7.6
-before_install:
-  - python --version
-  - pip install -U pip
-install:
-  - pip install -r scripts/requirements.txt # install packages
-script: python scripts/check.py
