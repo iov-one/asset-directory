@@ -1,0 +1,12 @@
+{
+  "name": "asset-directory",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/iov-one/asset-directory.git",
+  "author": "admin@iov.one",
+  "license": "Apache-2.0",
+  "private": false,
+  "devDependencies": {
+    "json-stable-stringify": "^1.0.1"
+  }
+}
