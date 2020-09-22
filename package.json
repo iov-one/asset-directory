@@ -13,7 +13,7 @@
    "husky": {
       "hooks": {
          "pre-commit": "yarn verify && yarn format",
-         "pre-push": "yarn verify && yarn aggregate && git diff --exit-code assets.json || echo '*** You need to commit assets.json. ***'"
+         "pre-push": "yarn verify && yarn aggregate && git diff --exit-code assets.json || { echo '*** You need to commit assets.json. ***' ; false }"
       }
    },
    "scripts": {
