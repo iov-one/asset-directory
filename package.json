@@ -12,7 +12,7 @@
    "husky": {
       "hooks": {
          "pre-commit": "yarn verify && yarn format",
-         "pre-push": "yarn veryify && yarn aggregate"
+         "pre-push": "yarn verify && yarn aggregate"
       }
    },
    "scripts": {
