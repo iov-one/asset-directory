@@ -7,7 +7,7 @@ let error = false;
 const assets = {};
 const props = [
    "caip-20",
-   "iov-name-service-uri",
+   "starname-uri",
    "name",
    "symbol",
 ];
@@ -26,9 +26,9 @@ fs.readdirSync( "." ).forEach( file => {
 
    const symbol = o.symbol.toLowerCase();
 
-   if ( o["iov-name-service-uri"] != `asset:${symbol}` ) {
+   if ( o["starname-uri"] != `asset:${symbol}` ) {
       error = true;
-      console.error( `Invalid uri of '${o["iov-name-service-uri"]}' in ${file}; should be 'asset:${symbol}'.` );
+      console.error( `Invalid uri of '${o["starname-uri"]}' in ${file}; should be 'asset:${symbol}'.` );
    }
 
    if ( assets[symbol] ) {

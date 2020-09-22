@@ -1,6 +1,6 @@
 {
   "caip-20": "",
-  "iov-name-service-uri": "asset:ltc",
+  "starname-uri": "asset:ltc",
   "name": "Litecoin",
   "symbol": "LTC"
 }

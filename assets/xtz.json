@@ -1,6 +1,6 @@
 {
   "caip-20": "",
-  "iov-name-service-uri": "asset:xtz",
+  "starname-uri": "asset:xtz",
   "name": "Tezos",
   "symbol": "XTZ"
 }

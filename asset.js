@@ -20,7 +20,7 @@ const main = async () => {
    const symbol = ticker.toLowerCase();
    const asset = {
       "caip-20": "",
-      "iov-name-service-uri": `asset:${symbol}`,
+      "starname-uri": `asset:${symbol}`,
       "name": name,
       "symbol": ticker.toUpperCase()
    };

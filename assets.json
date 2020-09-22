@@ -1,85 +1,85 @@
 [
   {
     "caip-20": "",
-    "iov-name-service-uri": "asset:atom",
+    "starname-uri": "asset:atom",
     "name": "Cosmos",
     "symbol": "ATOM"
   },
   {
     "caip-20": "",
-    "iov-name-service-uri": "asset:band",
+    "starname-uri": "asset:band",
     "name": "Band Protocol",
     "symbol": "BAND"
   },
   {
     "caip-20": "",
-    "iov-name-service-uri": "asset:bch",
+    "starname-uri": "asset:bch",
     "name": "Bitcoin Cash",
     "symbol": "BCH"
   },
   {
     "caip-20": "",
-    "iov-name-service-uri": "asset:bnb",
+    "starname-uri": "asset:bnb",
     "name": "Binance Coin",
     "symbol": "BNB"
   },
   {
     "caip-20": "",
-    "iov-name-service-uri": "asset:btc",
+    "starname-uri": "asset:btc",
     "name": "Bitcoin",
     "symbol": "BTC"
   },
   {
     "caip-20": "",
-    "iov-name-service-uri": "asset:eth",
+    "starname-uri": "asset:eth",
     "name": "Ethereum",
     "symbol": "ETH"
   },
   {
     "caip-20": "",
-    "iov-name-service-uri": "asset:iov",
+    "starname-uri": "asset:iov",
     "name": "IOV Token",
     "symbol": "IOV"
   },
   {
     "caip-20": "",
-    "iov-name-service-uri": "asset:iris",
+    "starname-uri": "asset:iris",
     "name": "IRISnet",
     "symbol": "IRIS"
   },
   {
     "caip-20": "",
-    "iov-name-service-uri": "asset:kava",
+    "starname-uri": "asset:kava",
     "name": "Kava.io",
     "symbol": "KAVA"
   },
   {
     "caip-20": "",
-    "iov-name-service-uri": "asset:ltc",
+    "starname-uri": "asset:ltc",
     "name": "Litecoin",
     "symbol": "LTC"
   },
   {
     "caip-20": "",
-    "iov-name-service-uri": "asset:okb",
+    "starname-uri": "asset:okb",
     "name": "OKB",
     "symbol": "OKB"
   },
   {
     "caip-20": "",
-    "iov-name-service-uri": "asset:svt",
+    "starname-uri": "asset:svt",
     "name": "Savitar Token",
     "symbol": "SVT"
   },
   {
     "caip-20": "",
-    "iov-name-service-uri": "asset:usdt",
+    "starname-uri": "asset:usdt",
     "name": "Tether",
     "symbol": "USDT"
   },
   {
     "caip-20": "",
-    "iov-name-service-uri": "asset:xtz",
+    "starname-uri": "asset:xtz",
     "name": "Tezos",
     "symbol": "XTZ"
   }

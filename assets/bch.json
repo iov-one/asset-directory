@@ -1,6 +1,6 @@
 {
   "caip-20": "",
-  "iov-name-service-uri": "asset:bch",
+  "starname-uri": "asset:bch",
   "name": "Bitcoin Cash",
   "symbol": "BCH"
 }

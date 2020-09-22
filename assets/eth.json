@@ -1,6 +1,6 @@
 {
   "caip-20": "",
-  "iov-name-service-uri": "asset:eth",
+  "starname-uri": "asset:eth",
   "name": "Ethereum",
   "symbol": "ETH"
 }

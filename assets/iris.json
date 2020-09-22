@@ -1,6 +1,6 @@
 {
   "caip-20": "",
-  "iov-name-service-uri": "asset:iris",
+  "starname-uri": "asset:iris",
   "name": "IRISnet",
   "symbol": "IRIS"
 }
