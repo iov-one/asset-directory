@@ -1,12 +1,22 @@
 {
-  "name": "asset-directory",
-  "version": "1.0.0",
-  "main": "index.js",
-  "repository": "https://github.com/iov-one/asset-directory.git",
-  "author": "admin@iov.one",
-  "license": "Apache-2.0",
-  "private": false,
-  "devDependencies": {
-    "json-stable-stringify": "^1.0.1"
-  }
+   "name": "asset-directory",
+   "version": "1.0.0",
+   "repository": "https://github.com/iov-one/asset-directory.git",
+   "author": "admin@iov.one",
+   "license": "Apache-2.0",
+   "private": false,
+   "devDependencies": {
+      "husky": "^4.3.0",
+      "json-stable-stringify": "^1.0.1"
+   },
+   "husky": {
+      "hooks": {
+         "pre-commit": "yarn verify && yarn format",
+         "pre-push": "yarn"
+      }
+   },
+   "scripts": {
+      "format": "node format.js",
+      "verify": "node verify.js"
+   }
 }
