@@ -1,6 +1,6 @@
 {
-  "symbol": "KAVA",
-  "name": "Kava.io",
   "caip-20": "",
-  "iov-name-service-uri": "asset:kava"
+  "iov-name-service-uri": "asset:kava",
+  "name": "Kava.io",
+  "symbol": "KAVA"
 }

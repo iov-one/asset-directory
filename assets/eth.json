@@ -1,6 +1,6 @@
 {
-  "symbol": "ETH",
-  "name": "Ethereum",
   "caip-20": "",
-  "iov-name-service-uri": "asset:eth"
+  "iov-name-service-uri": "asset:eth",
+  "name": "Ethereum",
+  "symbol": "ETH"
 }

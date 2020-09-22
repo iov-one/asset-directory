@@ -1,6 +1,6 @@
 {
-  "symbol": "SVT",
-  "name": "Savitar Token",
   "caip-20": "",
-  "iov-name-service-uri": "asset:svt"
+  "iov-name-service-uri": "asset:svt",
+  "name": "Savitar Token",
+  "symbol": "SVT"
 }

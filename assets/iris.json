@@ -1,6 +1,6 @@
 {
-  "symbol": "IRIS",
-  "name": "IRISnet",
   "caip-20": "",
-  "iov-name-service-uri": "asset:iris"
+  "iov-name-service-uri": "asset:iris",
+  "name": "IRISnet",
+  "symbol": "IRIS"
 }

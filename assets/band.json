@@ -1,6 +1,6 @@
 {
-  "symbol": "BAND",
-  "name": "Band Protocol",
   "caip-20": "",
-  "iov-name-service-uri": "asset:band"
+  "iov-name-service-uri": "asset:band",
+  "name": "Band Protocol",
+  "symbol": "BAND"
 }

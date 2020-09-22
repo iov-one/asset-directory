@@ -1,6 +1,6 @@
 {
-  "symbol": "ATOM",
-  "name": "Cosmos",
   "caip-20": "",
-  "iov-name-service-uri": "asset:atom"
+  "iov-name-service-uri": "asset:atom",
+  "name": "Cosmos",
+  "symbol": "ATOM"
 }

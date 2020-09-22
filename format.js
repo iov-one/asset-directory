@@ -8,5 +8,5 @@ fs.readdirSync( "." ).forEach( file => {
    const json = fs.readFileSync( file, "utf-8" );
    const o = JSON.parse( json );
 
-   fs.writeFileSync( file, stringify( o, { space: "  " } ) );
+   fs.writeFileSync( file, stringify( o, { space: "  " } ) + "\n" );
 } );
