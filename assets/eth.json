@@ -1,6 +1,6 @@
 {
   "caip-20": "",
-  "starname-uri": "asset:eth",
   "name": "Ethereum",
+  "starname-uri": "asset:eth",
   "symbol": "ETH"
 }

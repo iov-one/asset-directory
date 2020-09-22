@@ -1,6 +1,6 @@
 {
   "caip-20": "",
-  "starname-uri": "asset:ltc",
   "name": "Litecoin",
+  "starname-uri": "asset:ltc",
   "symbol": "LTC"
 }

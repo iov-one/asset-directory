@@ -1,6 +1,6 @@
 {
   "caip-20": "",
-  "starname-uri": "asset:btc",
   "name": "Bitcoin",
+  "starname-uri": "asset:btc",
   "symbol": "BTC"
 }

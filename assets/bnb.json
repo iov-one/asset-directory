@@ -1,6 +1,6 @@
 {
   "caip-20": "",
-  "starname-uri": "asset:bnb",
   "name": "Binance Coin",
+  "starname-uri": "asset:bnb",
   "symbol": "BNB"
 }

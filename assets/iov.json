@@ -1,6 +1,6 @@
 {
   "caip-20": "",
-  "starname-uri": "asset:iov",
   "name": "IOV Token",
+  "starname-uri": "asset:iov",
   "symbol": "IOV"
 }

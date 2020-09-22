@@ -1,6 +1,6 @@
 {
   "caip-20": "",
-  "starname-uri": "asset:usdt",
   "name": "Tether",
+  "starname-uri": "asset:usdt",
   "symbol": "USDT"
 }

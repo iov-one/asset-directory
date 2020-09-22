@@ -1,6 +1,6 @@
 {
   "caip-20": "",
-  "starname-uri": "asset:xtz",
   "name": "Tezos",
+  "starname-uri": "asset:xtz",
   "symbol": "XTZ"
 }
