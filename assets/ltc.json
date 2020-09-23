@@ -3,5 +3,5 @@
   "name": "Litecoin",
   "starname-uri": "asset:ltc",
   "symbol": "LTC",
-  "trust-wallet-id": 2
+  "trust-wallet-coinId": 2
 }

@@ -39,7 +39,7 @@
     "name": "Ethereum",
     "starname-uri": "asset:eth",
     "symbol": "ETH",
-    "trust-wallet-id": 60
+    "trust-wallet-coinId": 60
   },
   {
     "caip-20": "",
@@ -65,7 +65,7 @@
     "name": "Litecoin",
     "starname-uri": "asset:ltc",
     "symbol": "LTC",
-    "trust-wallet-id": 2
+    "trust-wallet-coinId": 2
   },
   {
     "caip-20": "",
