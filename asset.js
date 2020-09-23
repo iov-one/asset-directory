@@ -1,3 +1,4 @@
+const fetch = require( "node-fetch" );
 const fs = require( "fs" );
 const path = require( "path" );
 const stringify = require( "json-stable-stringify" );
@@ -15,17 +16,30 @@ const prompt = async ( display ) => {
 
 
 const main = async () => {
-   const name = await prompt( `Enter the name of the token: ` ).catch( e => { throw e } );
-   const ticker = await prompt( `Enter the symbol (ticker) of the token: ` ).catch( e => { throw e } );
-   const symbol = ticker.toLowerCase();
-   const asset = {
-      "caip-20": "",
-      "starname-uri": `asset:${symbol}`,
-      "name": name,
-      "symbol": ticker.toUpperCase()
-   };
+   const reSymbol = new RegExp( /[A-Z]/ );
+   const fetched = await fetch( "https://raw.githubusercontent.com/trustwallet/wallet-core/master/coins.json" ).catch( e => { throw e } );
+   const trust = await fetched.json().catch( e => { throw e } );
 
-   fs.writeFileSync( path.join( "assets", `${symbol}.json` ), stringify( asset, { space: "  " } ) + "\n" );
+   while ( true ) {
+      const symbol = await prompt( `Enter the symbol of the token or Ctrl-c to quit: ` ).catch( e => { throw e } );
+
+      if ( !symbol.match( reSymbol ) ) throw new Error( `Symbol should be mostly upper case, not '${symbol}'.` );
+
+      const lowercased = symbol.toLowerCase();
+      const file = path.join( "assets", `${lowercased}.json` );
+      const trusted = trust.find( coin => coin.symbol == symbol );
+      const name = trusted && trusted.name || await prompt( `Enter the name of the token: ` ).catch( e => { throw e } );
+      const asset = {
+         "caip-20": "",
+         "name": name,
+         "starname-uri": `asset:${lowercased}`,
+         "symbol": symbol,
+         "trust-wallet-coinId": trusted ? trusted.coinId : null,
+      };
+
+      fs.writeFileSync( file, stringify( asset, { space: "  " } ) + "\n" );
+      console.log( `Wrote ${file}.` );
+   }
 }
 
 

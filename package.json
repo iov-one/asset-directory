@@ -2,7 +2,9 @@
    "name": "asset-directory",
    "version": "1.0.0",
    "repository": "https://github.com/iov-one/asset-directory.git",
-   "files": [ "assets.json" ],
+   "files": [
+      "assets.json"
+   ],
    "author": "admin@iov.one",
    "license": "Apache-2.0",
    "private": false,
@@ -21,5 +23,8 @@
       "add-asset": "node asset.js",
       "format": "node format.js",
       "verify": "node verify.js"
+   },
+   "dependencies": {
+      "node-fetch": "^2.6.1"
    }
 }
