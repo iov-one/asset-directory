@@ -3,5 +3,5 @@
   "name": "Ethereum",
   "starname-uri": "asset:eth",
   "symbol": "ETH",
-  "trust-wallet-id": 60
+  "trust-wallet-coinId": 60
 }
