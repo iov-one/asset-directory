@@ -1,0 +1,95 @@
+[
+  {
+    "caip-20": "",
+    "name": "Cosmos",
+    "starname-uri": "asset:atom",
+    "symbol": "ATOM",
+    "trust-wallet-coinId": 118
+  },
+  {
+    "caip-20": "",
+    "name": "BandChain",
+    "starname-uri": "asset:band",
+    "symbol": "BAND",
+    "trust-wallet-coinId": 494
+  },
+  {
+    "caip-20": "",
+    "name": "Bitcoin Cash",
+    "starname-uri": "asset:bch",
+    "symbol": "BCH",
+    "trust-wallet-coinId": 145
+  },
+  {
+    "caip-20": "",
+    "name": "Binance",
+    "starname-uri": "asset:bnb",
+    "symbol": "BNB",
+    "trust-wallet-coinId": 714
+  },
+  {
+    "caip-20": "",
+    "name": "Bitcoin",
+    "starname-uri": "asset:btc",
+    "symbol": "BTC",
+    "trust-wallet-coinId": 0
+  },
+  {
+    "caip-20": "",
+    "name": "Ethereum",
+    "starname-uri": "asset:eth",
+    "symbol": "ETH",
+    "trust-wallet-id": 60
+  },
+  {
+    "caip-20": "",
+    "name": "IOV Token",
+    "starname-uri": "asset:iov",
+    "symbol": "IOV"
+  },
+  {
+    "caip-20": "",
+    "name": "IRISnet",
+    "starname-uri": "asset:iris",
+    "symbol": "IRIS"
+  },
+  {
+    "caip-20": "",
+    "name": "Kava",
+    "starname-uri": "asset:kava",
+    "symbol": "KAVA",
+    "trust-wallet-coinId": 459
+  },
+  {
+    "caip-20": "",
+    "name": "Litecoin",
+    "starname-uri": "asset:ltc",
+    "symbol": "LTC",
+    "trust-wallet-id": 2
+  },
+  {
+    "caip-20": "",
+    "name": "OKB",
+    "starname-uri": "asset:okb",
+    "symbol": "OKB"
+  },
+  {
+    "caip-20": "",
+    "name": "Savitar Token",
+    "starname-uri": "asset:svt",
+    "symbol": "SVT"
+  },
+  {
+    "caip-20": "",
+    "name": "Tether",
+    "starname-uri": "asset:usdt",
+    "symbol": "USDT"
+  },
+  {
+    "caip-20": "",
+    "name": "Tezos",
+    "starname-uri": "asset:xtz",
+    "symbol": "XTZ",
+    "trust-wallet-coinId": 1729
+  }
+]

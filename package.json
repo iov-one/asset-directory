@@ -1,0 +1,30 @@
+{
+   "name": "asset-directory",
+   "version": "1.0.0",
+   "repository": "https://github.com/iov-one/asset-directory.git",
+   "files": [
+      "assets.json"
+   ],
+   "author": "admin@iov.one",
+   "license": "Apache-2.0",
+   "private": false,
+   "devDependencies": {
+      "husky": "^4.3.0",
+      "json-stable-stringify": "^1.0.1"
+   },
+   "husky": {
+      "hooks": {
+         "pre-commit": "yarn verify && yarn format",
+         "pre-push": "yarn verify && yarn aggregate && git diff --exit-code assets.json || ( echo '*** You need to commit assets.json. ***' ; false )"
+      }
+   },
+   "scripts": {
+      "aggregate": "node aggregate.js",
+      "add-asset": "node asset.js",
+      "format": "node format.js",
+      "verify": "node verify.js"
+   },
+   "dependencies": {
+      "node-fetch": "^2.6.1"
+   }
+}
