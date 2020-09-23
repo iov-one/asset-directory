@@ -1,6 +1,20 @@
 [
   {
     "caip-20": "",
+    "name": "Cardano",
+    "starname-uri": "asset:ada",
+    "symbol": "ADA",
+    "trust-wallet-coinId": 1815
+  },
+  {
+    "caip-20": "",
+    "name": "Algorand",
+    "starname-uri": "asset:algo",
+    "symbol": "ALGO",
+    "trust-wallet-coinId": 283
+  },
+  {
+    "caip-20": "",
     "name": "Cosmos",
     "starname-uri": "asset:atom",
     "symbol": "ATOM",
@@ -12,6 +26,13 @@
     "starname-uri": "asset:band",
     "symbol": "BAND",
     "trust-wallet-coinId": 494
+  },
+  {
+    "caip-20": "",
+    "name": "Basic Attention Token",
+    "starname-uri": "asset:bat",
+    "symbol": "BAT",
+    "trust-wallet-coinId": null
   },
   {
     "caip-20": "",
@@ -33,6 +54,48 @@
     "starname-uri": "asset:btc",
     "symbol": "BTC",
     "trust-wallet-coinId": 0
+  },
+  {
+    "caip-20": "",
+    "name": "Compound",
+    "starname-uri": "asset:comp",
+    "symbol": "COMP",
+    "trust-wallet-coinId": null
+  },
+  {
+    "caip-20": "",
+    "name": "Crypto.com Coin",
+    "starname-uri": "asset:cro",
+    "symbol": "CRO",
+    "trust-wallet-coinId": null
+  },
+  {
+    "caip-20": "",
+    "name": "Dai",
+    "starname-uri": "asset:dai",
+    "symbol": "DAI",
+    "trust-wallet-coinId": null
+  },
+  {
+    "caip-20": "",
+    "name": "Dash",
+    "starname-uri": "asset:dash",
+    "symbol": "DASH",
+    "trust-wallet-coinId": 5
+  },
+  {
+    "caip-20": "",
+    "name": "Polkadot",
+    "starname-uri": "asset:dot",
+    "symbol": "DOT",
+    "trust-wallet-coinId": 354
+  },
+  {
+    "caip-20": "",
+    "name": "EOS",
+    "starname-uri": "asset:eos",
+    "symbol": "EOS",
+    "trust-wallet-coinId": 194
   },
   {
     "caip-20": "",
@@ -62,10 +125,31 @@
   },
   {
     "caip-20": "",
+    "name": "Kusama",
+    "starname-uri": "asset:ksm",
+    "symbol": "KSM",
+    "trust-wallet-coinId": 434
+  },
+  {
+    "caip-20": "",
+    "name": "Chainlink",
+    "starname-uri": "asset:link",
+    "symbol": "LINK",
+    "trust-wallet-coinId": null
+  },
+  {
+    "caip-20": "",
     "name": "Litecoin",
     "starname-uri": "asset:ltc",
     "symbol": "LTC",
     "trust-wallet-coinId": 2
+  },
+  {
+    "caip-20": "",
+    "name": "NEO",
+    "starname-uri": "asset:neo",
+    "symbol": "NEO",
+    "trust-wallet-coinId": 888
   },
   {
     "caip-20": "",
@@ -75,9 +159,30 @@
   },
   {
     "caip-20": "",
+    "name": "Ren",
+    "starname-uri": "asset:ren",
+    "symbol": "REN",
+    "trust-wallet-coinId": null
+  },
+  {
+    "caip-20": "",
     "name": "Savitar Token",
     "starname-uri": "asset:svt",
     "symbol": "SVT"
+  },
+  {
+    "caip-20": "",
+    "name": "Tron",
+    "starname-uri": "asset:trx",
+    "symbol": "TRX",
+    "trust-wallet-coinId": 195
+  },
+  {
+    "caip-20": "",
+    "name": "USD Coin",
+    "starname-uri": "asset:usdc",
+    "symbol": "USDC",
+    "trust-wallet-coinId": null
   },
   {
     "caip-20": "",
@@ -87,9 +192,44 @@
   },
   {
     "caip-20": "",
+    "name": "Wrapped Bitcoin",
+    "starname-uri": "asset:wbtc",
+    "symbol": "WBTC",
+    "trust-wallet-coinId": null
+  },
+  {
+    "caip-20": "",
+    "name": "Stellar",
+    "starname-uri": "asset:xlm",
+    "symbol": "XLM",
+    "trust-wallet-coinId": 148
+  },
+  {
+    "caip-20": "",
+    "name": "Monero",
+    "starname-uri": "asset:xmr",
+    "symbol": "XMR",
+    "trust-wallet-coinId": null
+  },
+  {
+    "caip-20": "",
+    "name": "XRP",
+    "starname-uri": "asset:xrp",
+    "symbol": "XRP",
+    "trust-wallet-coinId": 144
+  },
+  {
+    "caip-20": "",
     "name": "Tezos",
     "starname-uri": "asset:xtz",
     "symbol": "XTZ",
     "trust-wallet-coinId": 1729
+  },
+  {
+    "caip-20": "",
+    "name": "Zcash",
+    "starname-uri": "asset:zec",
+    "symbol": "ZEC",
+    "trust-wallet-coinId": 133
   }
 ]
