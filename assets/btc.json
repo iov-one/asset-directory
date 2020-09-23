@@ -2,5 +2,6 @@
   "caip-20": "",
   "name": "Bitcoin",
   "starname-uri": "asset:btc",
-  "symbol": "BTC"
+  "symbol": "BTC",
+  "trust-wallet-coinId": 0
 }

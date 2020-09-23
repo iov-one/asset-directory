@@ -2,5 +2,6 @@
   "caip-20": "",
   "name": "Ethereum",
   "starname-uri": "asset:eth",
-  "symbol": "ETH"
+  "symbol": "ETH",
+  "trust-wallet-id": 60
 }

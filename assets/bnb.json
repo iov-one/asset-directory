@@ -1,6 +1,7 @@
 {
   "caip-20": "",
-  "name": "Binance Coin",
+  "name": "Binance",
   "starname-uri": "asset:bnb",
-  "symbol": "BNB"
+  "symbol": "BNB",
+  "trust-wallet-coinId": 714
 }
