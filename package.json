@@ -1,13 +1,16 @@
 {
-   "name": "asset-directory",
+   "name": "@iov/asset-directory",
    "version": "1.0.0",
+   "description": "Metadata for assets in the Starname ecosystem",
    "repository": "https://github.com/iov-one/asset-directory.git",
    "files": [
       "assets.json"
    ],
-   "author": "admin@iov.one",
+   "author": "IOV SAS <admin@iov.one>",
    "license": "Apache-2.0",
-   "private": false,
+   "publishConfig": {
+      "access": "public"
+   },
    "devDependencies": {
       "husky": "^4.3.0",
       "json-stable-stringify": "^1.0.1"
