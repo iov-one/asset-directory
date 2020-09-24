@@ -8,6 +8,9 @@
    ],
    "author": "IOV SAS <admin@iov.one>",
    "license": "Apache-2.0",
+   "publishConfig": {
+      "access": "public"
+   },
    "devDependencies": {
       "husky": "^4.3.0",
       "json-stable-stringify": "^1.0.1"
