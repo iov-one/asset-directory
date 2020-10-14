@@ -1,6 +1,6 @@
 {
   "symbol": "LTC",
-  "caip-19": "",
+  "caip-19": "bip122:12a765e31ffd4059bada1e25190f6e98/slip44:2",
   "starname-uri": "asset:ltc",
   "trustwallet-uid": "c2",
   "trustwallet-info": "/trustwallet/assets/litecoin/info/info.json"
