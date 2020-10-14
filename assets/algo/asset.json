@@ -1,7 +1,5 @@
 {
   "symbol": "ALGO",
   "caip-19": "",
-  "starname-uri": "asset:algo",
-  "trustwallet-uid": "c283",
-  "trustwallet-info": "/trustwallet/assets/algorand/info/info.json"
+  "trustwallet-uid": "c283"
 }

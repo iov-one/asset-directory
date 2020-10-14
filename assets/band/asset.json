@@ -1,7 +1,5 @@
 {
   "symbol": "BAND",
   "caip-19": "cosmos:band-wenchang-mainnet/slip44:494",
-  "starname-uri": "asset:band",
-  "trustwallet-uid": "c494",
-  "trustwallet-info": "/trustwallet/assets/band/info/info.json"
+  "trustwallet-uid": "c494"
 }

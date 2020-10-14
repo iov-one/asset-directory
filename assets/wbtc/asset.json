@@ -1,7 +1,5 @@
 {
   "symbol": "WBTC",
   "caip-19": "eip155:1/erc20:0x2260fac5e5542a773aa44fbcfedf7c193bc2c599",
-  "starname-uri": "asset:wbtc",
-  "trustwallet-uid": "c60_t0x2260fac5e5542a773aa44fbcfedf7c193bc2c599",
-  "trustwallet-info": "/trustwallet/assets/blockchains/ethereum/assets/0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599/info.json"
+  "trustwallet-uid": "c60_t0x2260fac5e5542a773aa44fbcfedf7c193bc2c599"
 }

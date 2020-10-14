@@ -1,7 +1,5 @@
 {
   "symbol": "KSM",
   "caip-19": "",
-  "starname-uri": "asset:ksm",
-  "trustwallet-uid": "c434",
-  "trustwallet-info": "/trustwallet/assets/kusama/info/info.json"
+  "trustwallet-uid": "c434"
 }

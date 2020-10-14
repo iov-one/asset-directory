@@ -1,7 +1,5 @@
 {
   "symbol": "KAVA",
   "caip-19": "cosmos:kava-3/slip44:459",
-  "starname-uri": "asset:kava",
-  "trustwallet-uid": "c459",
-  "trustwallet-info": "/trustwallet/assets/kava/info/info.json"
+  "trustwallet-uid": "c459"
 }

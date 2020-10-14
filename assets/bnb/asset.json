@@ -1,7 +1,5 @@
 {
   "symbol": "BNB",
   "caip-19": "cosmos:Binance-Chain-Tigris/slip44:714",
-  "starname-uri": "asset:bnb",
-  "trustwallet-uid": "c714",
-  "trustwallet-info": "/trustwallet/assets/binance/info/info.json"
+  "trustwallet-uid": "c714"
 }

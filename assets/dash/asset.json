@@ -1,7 +1,5 @@
 {
   "symbol": "DASH",
   "caip-19": "",
-  "starname-uri": "asset:dash",
-  "trustwallet-uid": "c5",
-  "trustwallet-info": "/trustwallet/assets/dash/info/info.json"
+  "trustwallet-uid": "c5"
 }

@@ -1,7 +1,5 @@
 {
   "symbol": "LINK",
   "caip-19": "eip155:1/erc20:0x514910771af9ca656af840dff83e8264ecf986ca",
-  "starname-uri": "asset:link",
-  "trustwallet-uid": "c60_t0x514910771af9ca656af840dff83e8264ecf986ca",
-  "trustwallet-info": "/trustwallet/assets/blockchains/ethereum/assets/0x514910771AF9Ca656af840dff83E8264EcF986CA/info.json"
+  "trustwallet-uid": "c60_t0x514910771af9ca656af840dff83e8264ecf986ca"
 }

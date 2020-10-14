@@ -1,7 +1,5 @@
 {
   "symbol": "ATOM",
   "caip-19": "cosmos:cosmoshub-3/slip44:118",
-  "starname-uri": "asset:atom",
-  "trustwallet-uid": "c118",
-  "trustwallet-info": "/trustwallet/assets/cosmos/info/info.json"
+  "trustwallet-uid": "c118"
 }

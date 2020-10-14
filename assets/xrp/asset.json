@@ -1,7 +1,5 @@
 {
   "symbol": "XRP",
   "caip-19": "",
-  "starname-uri": "asset:xrp",
-  "trustwallet-uid": "c144",
-  "trustwallet-info": "/trustwallet/assets/xrp/info/info.json"
+  "trustwallet-uid": "c144"
 }

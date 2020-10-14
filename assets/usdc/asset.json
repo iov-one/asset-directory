@@ -1,7 +1,5 @@
 {
   "symbol": "USDC",
   "caip-19": "eip155:1/erc20:0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
-  "starname-uri": "asset:usdc",
-  "trustwallet-uid": "c60_t0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
-  "trustwallet-info": "/trustwallet/assets/blockchains/ethereum/assets/0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48/info.json"
+  "trustwallet-uid": "c60_t0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48"
 }

@@ -1,7 +1,5 @@
 {
   "symbol": "NEO",
   "caip-19": "",
-  "starname-uri": "asset:neo",
-  "trustwallet-uid": "c888",
-  "trustwallet-info": "/trustwallet/assets/neo/info/info.json"
+  "trustwallet-uid": "c888"
 }

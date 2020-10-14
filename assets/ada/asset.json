@@ -1,7 +1,5 @@
 {
   "symbol": "ADA",
   "caip-19": "",
-  "starname-uri": "asset:ada",
-  "trustwallet-uid": "c1815",
-  "trustwallet-info": "/trustwallet/assets/cardano/info.json"
+  "trustwallet-uid": "c1815"
 }

@@ -1,7 +1,5 @@
 {
   "symbol": "COMP",
   "caip-19": "eip155:1/erc20:0xc00e94cb662c3520282e6f5717214004a7f26888",
-  "starname-uri": "asset:comp",
-  "trustwallet-uid": "c60_t0xc00e94cb662c3520282e6f5717214004a7f26888",
-  "trustwallet-info": "/trustwallet/assets/blockchains/ethereum/assets/0xc00e94Cb662C3520282E6f5717214004A7f26888/info.json"
+  "trustwallet-uid": "c60_t0xc00e94cb662c3520282e6f5717214004a7f26888"
 }

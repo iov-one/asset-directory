@@ -1,7 +1,5 @@
 {
   "symbol": "DOT",
   "caip-19": "",
-  "starname-uri": "asset:dot",
-  "trustwallet-uid": "c354",
-  "trustwallet-info": "/trustwallet/assets/polkadot/info/info.json"
+  "trustwallet-uid": "c354"
 }

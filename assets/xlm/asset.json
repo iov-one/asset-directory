@@ -1,7 +1,5 @@
 {
   "symbol": "XLM",
   "caip-19": "",
-  "starname-uri": "asset:xlm",
-  "trustwallet-uid": "c148",
-  "trustwallet-info": "/trustwallet/assets/stellar/info/info.json"
+  "trustwallet-uid": "c148"
 }

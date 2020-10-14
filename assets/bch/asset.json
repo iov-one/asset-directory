@@ -1,7 +1,5 @@
 {
   "symbol": "BCH",
   "caip-19": "bip122:000000000000000000651ef99cb9fcbe/slip44:145",
-  "starname-uri": "asset:bch",
-  "trustwallet-uid": "c145",
-  "trustwallet-info": "/trustwallet/assets/bitcoincash/info/info.json"
+  "trustwallet-uid": "c145"
 }
