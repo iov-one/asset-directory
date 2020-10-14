@@ -1,0 +1,7 @@
+{
+  "symbol": "OKB",
+  "caip-19": "eip155:1/erc20:0x75231f58b43240c9718dd58b4967c5114342a86c",
+  "starname-uri": "asset:okb",
+  "trustwallet-uid": "c60_t0x75231f58b43240c9718dd58b4967c5114342a86c",
+  "trustwallet-info": "/trustwallet/assets/blockchains/ethereum/assets/0x75231F58b43240C9718Dd58B4967c5114342a86c/info.json"
+}
