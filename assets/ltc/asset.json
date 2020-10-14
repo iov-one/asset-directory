@@ -1,0 +1,7 @@
+{
+  "symbol": "LTC",
+  "caip-19": "",
+  "starname-uri": "asset:ltc",
+  "trustwallet-uid": "c2",
+  "trustwallet-info": "/trustwallet/assets/litecoin/info/info.json"
+}
