@@ -5,38 +5,65 @@ const path = require( "path" );
 let error = false;
 
 const assets = {};
-const props = [
-   "caip-20",
-   "starname-uri",
-   "name",
+const propsAsset = [
+   "caip-19",
    "symbol",
+   "trustwallet-uid",
+];
+const propsMetadata = [
+   "starname-uri",
+   "trustwallet-info",
 ];
 
 process.chdir( path.join( ".", "assets" ) );
-fs.readdirSync( "." ).forEach( file => {
-   const json = fs.readFileSync( file, "utf-8" );
-   const o = JSON.parse( json );
+fs.readdirSync( "." ).filter( dir => fs.statSync( dir ).isDirectory() ).forEach( dir => {
+   const fileAsset = path.join( dir, "asset.json" ); // HARD-CODED
+   const fileMetadata = path.join( dir, "metadata", "info.json" ); // HARD-CODED
+   const jsonAsset = fs.readFileSync( fileAsset, "utf-8" );
+   const jsonMetadata = fs.readFileSync( fileMetadata, "utf-8" );
 
-   props.forEach( prop => {
-      if ( !o.hasOwnProperty( prop ) ) {
+   try {
+      const asset = JSON.parse( jsonAsset );
+      const metadata = JSON.parse( jsonMetadata );
+
+      // check properties
+      propsAsset.forEach( prop => {
+         if ( !asset.hasOwnProperty( prop ) ) {
+            error = true;
+            console.error( `${fileAsset} is missing property '${prop}'.` );
+         }
+      } );
+      propsMetadata.forEach( prop => {
+         if ( !metadata.hasOwnProperty( prop ) ) {
+            error = true;
+            console.error( `${fileMetadata} is missing property '${prop}'.` );
+         }
+      } );
+
+      // check symbol
+      const symbol = asset.symbol.toLowerCase();
+
+      if ( symbol != dir ) {
          error = true;
-         console.error( `${file} is missing property '${prop}'.` );
+         console.error( `Invalid directory or symbol for ${fileAsset}.` );
       }
-   } );
 
-   const symbol = o.symbol.toLowerCase();
+      if ( assets[symbol] ) {
+         error = true;
+         console.error( `Duplicate symbol '${asset.symbol}' in ${fileAsset}'.` );
+      }
 
-   if ( o["starname-uri"] != `asset:${symbol}` ) {
-      error = true;
-      console.error( `Invalid uri of '${o["starname-uri"]}' in ${file}; should be 'asset:${symbol}'.` );
+      // check congruency
+      if ( metadata["starname-uri"] != `asset:${symbol}` ) { // HARD-CODED
+         error = true;
+         console.error( `Invalid uri of '${metadata["starname-uri"]}' in ${fileMetadata}; should be 'asset:${symbol}'.` );
+      }
+
+      // add to assets
+      assets[symbol] = true;
+   } catch ( e ) {
+      console.error( fileAsset, fileMetadata, e.message );
    }
-
-   if ( assets[symbol] ) {
-      error = true;
-      console.error( `Duplicate symbol '${o.symbol}' in ${file}'.` );
-   }
-
-   assets[symbol] = true;
 } );
 
 process.exit( error ? -1 : 0 );
