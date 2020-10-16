@@ -1,4 +1,4 @@
 {
   "starname-uri": "asset:bch",
-  "trustwallet-info": "/trustwallet/assets/bitcoincash/info/info.json"
+  "trustwallet-info": "/trustwallet/assets/blockchains/bitcoincash/info/info.json"
 }
