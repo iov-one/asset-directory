@@ -15,10 +15,9 @@ const propsMetadata = [
    "trustwallet-info",
 ];
 
-process.chdir( path.join( ".", "assets" ) );
-fs.readdirSync( "." ).filter( dir => fs.statSync( dir ).isDirectory() ).forEach( dir => {
-   const fileAsset = path.join( dir, "asset.json" ); // HARD-CODED
-   const fileMetadata = path.join( dir, "metadata", "info.json" ); // HARD-CODED
+fs.readdirSync( "assets" ).filter( dir => fs.statSync( path.join( "assets", dir ) ).isDirectory() ).forEach( dir => {
+   const fileAsset = path.join( "assets", dir, "asset.json" ); // HARD-CODED
+   const fileMetadata = path.join( "assets", dir, "metadata", "info.json" ); // HARD-CODED
    const jsonAsset = fs.readFileSync( fileAsset, "utf-8" );
    const jsonMetadata = fs.readFileSync( fileMetadata, "utf-8" );
 
@@ -57,6 +56,25 @@ fs.readdirSync( "." ).filter( dir => fs.statSync( dir ).isDirectory() ).forEach(
       if ( metadata["starname-uri"] != `asset:${symbol}` ) { // HARD-CODED
          error = true;
          console.error( `Invalid uri of '${metadata["starname-uri"]}' in ${fileMetadata}; should be 'asset:${symbol}'.` );
+      }
+
+      // check trustwallet info
+      const fileInfo = metadata["trustwallet-info"] ? path.join( ".", ...metadata["trustwallet-info"].split( "/" ) ) : null;
+
+      if ( fileInfo && !fs.existsSync( fileInfo ) ) {
+         error = true;
+         console.error( `Invalid path '${fileInfo}' in ${fileMetadata}.` );
+      }
+
+      // check name
+      if ( !asset.name ) {
+         const jsonInfo = fs.readFileSync( fileInfo );
+         const info = JSON.parse( jsonInfo );
+
+         if ( !info.name ) {
+            error = true;
+            console.error( `${fileInfo} is missing property 'name'!` );
+         }
       }
 
       // add to assets
