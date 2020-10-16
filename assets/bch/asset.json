@@ -1,5 +1,5 @@
 {
-  "symbol": "BCH",
   "caip-19": "bip122:000000000000000000651ef99cb9fcbe/slip44:145",
+  "symbol": "BCH",
   "trustwallet-uid": "c145"
 }
