@@ -19,5 +19,6 @@ fs.readdirSync( "." ).filter( dir => fs.statSync( dir ).isDirectory() ).forEach(
 
    assets.push( asset );
 } );
+process.chdir( ".." );
 
 fs.writeFileSync( "assets.json", stringify( assets.sort( ( a, b ) => a.symbol.localeCompare( b.symbol ) ), { space: "  " } ) + "\n" );
