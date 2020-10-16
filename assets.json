@@ -1,34 +1,44 @@
 [
   {
     "caip-19": null,
+    "logo": "/trustwallet/assets/blockchains/cardano/info/logo.png",
+    "name": "Cardano",
     "starname-uri": "asset:ada",
     "symbol": "ADA",
-    "trustwallet-info": "/trustwallet/assets/cardano/info.json",
+    "trustwallet-info": "/trustwallet/assets/blockchains/cardano/info/info.json",
     "trustwallet-uid": "c1815"
   },
   {
     "caip-19": null,
+    "logo": "/trustwallet/assets/blockchains/algorand/info/logo.png",
+    "name": "Algorand",
     "starname-uri": "asset:algo",
     "symbol": "ALGO",
-    "trustwallet-info": "/trustwallet/assets/algorand/info/info.json",
+    "trustwallet-info": "/trustwallet/assets/blockchains/algorand/info/info.json",
     "trustwallet-uid": "c283"
   },
   {
     "caip-19": "cosmos:cosmoshub-3/slip44:118",
+    "logo": "/trustwallet/assets/blockchains/cosmos/info/logo.png",
+    "name": "Cosmos",
     "starname-uri": "asset:atom",
     "symbol": "ATOM",
-    "trustwallet-info": "/trustwallet/assets/cosmos/info/info.json",
+    "trustwallet-info": "/trustwallet/assets/blockchains/cosmos/info/info.json",
     "trustwallet-uid": "c118"
   },
   {
     "caip-19": "cosmos:band-wenchang-mainnet/slip44:494",
+    "logo": "/trustwallet/assets/blockchains/band/info/logo.png",
+    "name": "BandChain",
     "starname-uri": "asset:band",
     "symbol": "BAND",
-    "trustwallet-info": "/trustwallet/assets/band/info/info.json",
+    "trustwallet-info": "/trustwallet/assets/blockchains/band/info/info.json",
     "trustwallet-uid": "c494"
   },
   {
     "caip-19": "eip155:1/erc20:0x0d8775f648430679a709e98d2b0cb6250d2887ef",
+    "logo": "/trustwallet/assets/blockchains/ethereum/assets/0x0D8775F648430679A709E98d2b0Cb6250d2887EF/logo.png",
+    "name": "Basic Attention Token",
     "starname-uri": "asset:bat",
     "symbol": "BAT",
     "trustwallet-info": "/trustwallet/assets/blockchains/ethereum/assets/0x0D8775F648430679A709E98d2b0Cb6250d2887EF/info.json",
@@ -36,27 +46,35 @@
   },
   {
     "caip-19": "bip122:000000000000000000651ef99cb9fcbe/slip44:145",
+    "logo": "/trustwallet/assets/blockchains/bitcoincash/info/logo.png",
+    "name": "Bitcoin Cash",
     "starname-uri": "asset:bch",
     "symbol": "BCH",
-    "trustwallet-info": "/trustwallet/assets/bitcoincash/info/info.json",
+    "trustwallet-info": "/trustwallet/assets/blockchains/bitcoincash/info/info.json",
     "trustwallet-uid": "c145"
   },
   {
     "caip-19": "cosmos:Binance-Chain-Tigris/slip44:714",
+    "logo": "/trustwallet/assets/blockchains/binance/info/logo.png",
+    "name": "BNB coin",
     "starname-uri": "asset:bnb",
     "symbol": "BNB",
-    "trustwallet-info": "/trustwallet/assets/binance/info/info.json",
+    "trustwallet-info": "/trustwallet/assets/blockchains/binance/info/info.json",
     "trustwallet-uid": "c714"
   },
   {
     "caip-19": "bip122:000000000019d6689c085ae165831e93/slip44:0",
+    "logo": "/trustwallet/assets/blockchains/bitcoin/info/logo.png",
+    "name": "Bitcoin",
     "starname-uri": "asset:btc",
     "symbol": "BTC",
-    "trustwallet-info": "/trustwallet/assets/bitcoin/info/info.json",
+    "trustwallet-info": "/trustwallet/assets/blockchains/bitcoin/info/info.json",
     "trustwallet-uid": "c0"
   },
   {
     "caip-19": "eip155:1/erc20:0xc00e94cb662c3520282e6f5717214004a7f26888",
+    "logo": "/trustwallet/assets/blockchains/ethereum/assets/0xc00e94Cb662C3520282E6f5717214004A7f26888/logo.png",
+    "name": "Compound",
     "starname-uri": "asset:comp",
     "symbol": "COMP",
     "trustwallet-info": "/trustwallet/assets/blockchains/ethereum/assets/0xc00e94Cb662C3520282E6f5717214004A7f26888/info.json",
@@ -64,6 +82,8 @@
   },
   {
     "caip-19": "eip155:1/erc20:0xa0b73e1ff0b80914ab6fe0444e65848c4c34450b",
+    "logo": "/trustwallet/assets/blockchains/ethereum/assets/0xA0b73E1Ff0B80914AB6fe0444E65848C4C34450b/logo.png",
+    "name": "Crypto.com Coin",
     "starname-uri": "asset:cro",
     "symbol": "CRO",
     "trustwallet-info": "/trustwallet/assets/blockchains/ethereum/assets/0xA0b73E1Ff0B80914AB6fe0444E65848C4C34450b/info.json",
@@ -71,6 +91,8 @@
   },
   {
     "caip-19": "eip155:1/erc20:0x6b175474e89094c44da98b954eedeac495271d0f",
+    "logo": "/trustwallet/assets/blockchains/ethereum/assets/0x6B175474E89094C44Da98b954EedeAC495271d0F/logo.png",
+    "name": "Multi-collateral DAI",
     "starname-uri": "asset:dai",
     "symbol": "DAI",
     "trustwallet-info": "/trustwallet/assets/blockchains/ethereum/assets/0x6B175474E89094C44Da98b954EedeAC495271d0F/info.json",
@@ -78,34 +100,43 @@
   },
   {
     "caip-19": null,
+    "logo": "/trustwallet/assets/blockchains/dash/info/logo.png",
+    "name": "Dash",
     "starname-uri": "asset:dash",
     "symbol": "DASH",
-    "trustwallet-info": "/trustwallet/assets/dash/info/info.json",
+    "trustwallet-info": "/trustwallet/assets/blockchains/dash/info/info.json",
     "trustwallet-uid": "c5"
   },
   {
     "caip-19": null,
+    "logo": "/trustwallet/assets/blockchains/polkadot/info/logo.png",
+    "name": "Polkadot",
     "starname-uri": "asset:dot",
     "symbol": "DOT",
-    "trustwallet-info": "/trustwallet/assets/polkadot/info/info.json",
+    "trustwallet-info": "/trustwallet/assets/blockchains/polkadot/info/info.json",
     "trustwallet-uid": "c354"
   },
   {
     "caip-19": null,
+    "logo": "/trustwallet/assets/blockchains/eos/info/logo.png",
+    "name": "EOS",
     "starname-uri": "asset:eos",
     "symbol": "EOS",
-    "trustwallet-info": "/trustwallet/assets/eos/info/info.json",
+    "trustwallet-info": "/trustwallet/assets/blockchains/eos/info/info.json",
     "trustwallet-uid": "c194"
   },
   {
     "caip-19": "eip155:1/slip44:60",
+    "logo": "/trustwallet/assets/blockchains/ethereum/info/logo.png",
+    "name": "Ethereum",
     "starname-uri": "asset:eth",
     "symbol": "ETH",
-    "trustwallet-info": "/trustwallet/assets/ethereum/info/info.json",
+    "trustwallet-info": "/trustwallet/assets/blockchains/ethereum/info/info.json",
     "trustwallet-uid": "c60"
   },
   {
     "caip-19": "cosmos:iov-mainnet-2/slip44:234",
+    "name": "Starname (IOV)",
     "starname-uri": "asset:iov",
     "symbol": "IOV",
     "trustwallet-info": null,
@@ -113,6 +144,7 @@
   },
   {
     "caip-19": "cosmos:irishub/slip44:566",
+    "name": "IRISnet",
     "starname-uri": "asset:iris",
     "symbol": "IRIS",
     "trustwallet-info": null,
@@ -120,20 +152,26 @@
   },
   {
     "caip-19": "cosmos:kava-3/slip44:459",
+    "logo": "/trustwallet/assets/blockchains/kava/info/logo.png",
+    "name": "Kava",
     "starname-uri": "asset:kava",
     "symbol": "KAVA",
-    "trustwallet-info": "/trustwallet/assets/kava/info/info.json",
+    "trustwallet-info": "/trustwallet/assets/blockchains/kava/info/info.json",
     "trustwallet-uid": "c459"
   },
   {
     "caip-19": null,
+    "logo": "/trustwallet/assets/blockchains/kusama/info/logo.png",
+    "name": "Kusama",
     "starname-uri": "asset:ksm",
     "symbol": "KSM",
-    "trustwallet-info": "/trustwallet/assets/kusama/info/info.json",
+    "trustwallet-info": "/trustwallet/assets/blockchains/kusama/info/info.json",
     "trustwallet-uid": "c434"
   },
   {
     "caip-19": "eip155:1/erc20:0x514910771af9ca656af840dff83e8264ecf986ca",
+    "logo": "/trustwallet/assets/blockchains/ethereum/assets/0x514910771AF9Ca656af840dff83E8264EcF986CA/logo.png",
+    "name": "Chainlink",
     "starname-uri": "asset:link",
     "symbol": "LINK",
     "trustwallet-info": "/trustwallet/assets/blockchains/ethereum/assets/0x514910771AF9Ca656af840dff83E8264EcF986CA/info.json",
@@ -141,20 +179,26 @@
   },
   {
     "caip-19": "bip122:12a765e31ffd4059bada1e25190f6e98/slip44:2",
+    "logo": "/trustwallet/assets/blockchains/litecoin/info/logo.png",
+    "name": "Litecoin",
     "starname-uri": "asset:ltc",
     "symbol": "LTC",
-    "trustwallet-info": "/trustwallet/assets/litecoin/info/info.json",
+    "trustwallet-info": "/trustwallet/assets/blockchains/litecoin/info/info.json",
     "trustwallet-uid": "c2"
   },
   {
     "caip-19": null,
+    "logo": "/trustwallet/assets/blockchains/neo/info/logo.png",
+    "name": "Neo",
     "starname-uri": "asset:neo",
     "symbol": "NEO",
-    "trustwallet-info": "/trustwallet/assets/neo/info/info.json",
+    "trustwallet-info": "/trustwallet/assets/blockchains/neo/info/info.json",
     "trustwallet-uid": "c888"
   },
   {
     "caip-19": "eip155:1/erc20:0x75231f58b43240c9718dd58b4967c5114342a86c",
+    "logo": "/trustwallet/assets/blockchains/ethereum/assets/0x75231F58b43240C9718Dd58B4967c5114342a86c/logo.png",
+    "name": "OKB",
     "starname-uri": "asset:okb",
     "symbol": "OKB",
     "trustwallet-info": "/trustwallet/assets/blockchains/ethereum/assets/0x75231F58b43240C9718Dd58B4967c5114342a86c/info.json",
@@ -162,6 +206,7 @@
   },
   {
     "caip-19": null,
+    "name": "Ren",
     "starname-uri": "asset:ren",
     "symbol": "REN",
     "trustwallet-info": null,
@@ -169,6 +214,7 @@
   },
   {
     "caip-19": "eip155:1/erc20:0x0646303daea310c9fc42cb5894899cf2a087c45d",
+    "name": "Savitar Token",
     "starname-uri": "asset:svt",
     "symbol": "SVT",
     "trustwallet-info": null,
@@ -176,13 +222,17 @@
   },
   {
     "caip-19": null,
+    "logo": "/trustwallet/assets/blockchains/tron/info/logo.png",
+    "name": "TRON",
     "starname-uri": "asset:trx",
     "symbol": "TRX",
-    "trustwallet-info": "/trustwallet/assets/tron/info/info.json",
+    "trustwallet-info": "/trustwallet/assets/blockchains/tron/info/info.json",
     "trustwallet-uid": "c195"
   },
   {
     "caip-19": "eip155:1/erc20:0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+    "logo": "/trustwallet/assets/blockchains/ethereum/assets/0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48/logo.png",
+    "name": "USD Coin",
     "starname-uri": "asset:usdc",
     "symbol": "USDC",
     "trustwallet-info": "/trustwallet/assets/blockchains/ethereum/assets/0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48/info.json",
@@ -190,6 +240,8 @@
   },
   {
     "caip-19": "eip155:1/erc20:0xdac17f958d2ee523a2206206994597c13d831ec7",
+    "logo": "/trustwallet/assets/blockchains/ethereum/assets/0xdAC17F958D2ee523a2206206994597C13D831ec7/logo.png",
+    "name": "Tether",
     "starname-uri": "asset:usdt",
     "symbol": "USDT",
     "trustwallet-info": "/trustwallet/assets/blockchains/ethereum/assets/0xdAC17F958D2ee523a2206206994597C13D831ec7/info.json",
@@ -197,6 +249,8 @@
   },
   {
     "caip-19": "eip155:1/erc20:0x2260fac5e5542a773aa44fbcfedf7c193bc2c599",
+    "logo": "/trustwallet/assets/blockchains/ethereum/assets/0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599/logo.png",
+    "name": "Wrapped Bitcoin",
     "starname-uri": "asset:wbtc",
     "symbol": "WBTC",
     "trustwallet-info": "/trustwallet/assets/blockchains/ethereum/assets/0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599/info.json",
@@ -204,13 +258,16 @@
   },
   {
     "caip-19": null,
+    "logo": "/trustwallet/assets/blockchains/stellar/info/logo.png",
+    "name": "Stellar",
     "starname-uri": "asset:xlm",
     "symbol": "XLM",
-    "trustwallet-info": "/trustwallet/assets/stellar/info/info.json",
+    "trustwallet-info": "/trustwallet/assets/blockchains/stellar/info/info.json",
     "trustwallet-uid": "c148"
   },
   {
     "caip-19": null,
+    "name": "Monero",
     "starname-uri": "asset:xmr",
     "symbol": "XMR",
     "trustwallet-info": null,
@@ -218,23 +275,29 @@
   },
   {
     "caip-19": null,
+    "logo": "/trustwallet/assets/blockchains/xrp/info/logo.png",
+    "name": "XRP",
     "starname-uri": "asset:xrp",
     "symbol": "XRP",
-    "trustwallet-info": "/trustwallet/assets/xrp/info/info.json",
+    "trustwallet-info": "/trustwallet/assets/blockchains/xrp/info/info.json",
     "trustwallet-uid": "c144"
   },
   {
     "caip-19": null,
+    "logo": "/trustwallet/assets/blockchains/tezos/info/logo.png",
+    "name": "Tezos",
     "starname-uri": "asset:xtz",
     "symbol": "XTZ",
-    "trustwallet-info": "/trustwallet/assets/tezos/info/info.json",
+    "trustwallet-info": "/trustwallet/assets/blockchains/tezos/info/info.json",
     "trustwallet-uid": "c1729"
   },
   {
     "caip-19": null,
+    "logo": "/trustwallet/assets/blockchains/zcash/info/logo.png",
+    "name": "Zcash",
     "starname-uri": "asset:zec",
     "symbol": "ZEC",
-    "trustwallet-info": "/trustwallet/assets/zcash/info/info.json",
+    "trustwallet-info": "/trustwallet/assets/blockchains/zcash/info/info.json",
     "trustwallet-uid": "c133"
   }
 ]
