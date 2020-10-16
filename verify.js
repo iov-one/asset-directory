@@ -77,6 +77,14 @@ fs.readdirSync( "assets" ).filter( dir => fs.statSync( path.join( "assets", dir 
          }
       }
 
+      // check logo
+      const fileLogo = metadata["trustwallet-info"] ? path.join( ".", ...metadata["trustwallet-info"].replace( "info.json", "logo.png" ).split( "/" ) ) : null; // HARD-CODED
+
+      if ( !asset.logo && fileLogo && !fs.existsSync( fileLogo )) {
+         error = true;
+         console.error( `Missing logo '${fileLogo}'!` );
+      }
+
       // add to assets
       assets[symbol] = true;
    } catch ( e ) {
