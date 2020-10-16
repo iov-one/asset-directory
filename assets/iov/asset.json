@@ -1,5 +1,6 @@
 {
   "caip-19": "cosmos:iov-mainnet-2/slip44:234",
+  "name": "Starname (IOV)",
   "symbol": "IOV",
   "trustwallet-uid": "c234"
 }

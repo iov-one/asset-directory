@@ -1,5 +1,6 @@
 {
   "caip-19": "cosmos:irishub/slip44:566",
+  "name": "IRISnet",
   "symbol": "IRIS",
   "trustwallet-uid": "c566"
 }
