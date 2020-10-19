@@ -18,27 +18,40 @@ const prompt = async ( display ) => {
 const main = async () => {
    const reSymbol = new RegExp( /[A-Z]/ );
    const fetched = await fetch( "https://raw.githubusercontent.com/trustwallet/wallet-core/master/coins.json" ).catch( e => { throw e } );
-   const trust = await fetched.json().catch( e => { throw e } );
+   const coins = await fetched.json().catch( e => { throw e } );
 
    while ( true ) {
       const symbol = await prompt( `Enter the symbol of the token or Ctrl-c to quit: ` ).catch( e => { throw e } );
 
       if ( !symbol.match( reSymbol ) ) throw new Error( `Symbol should be mostly upper case, not '${symbol}'.` );
+      if ( fs.existsSync( path.join( "assets", symbol ) ) ) throw new Error( `Asset for symbol ${symbol} already exists.` );
 
       const lowercased = symbol.toLowerCase();
-      const file = path.join( "assets", `${lowercased}.json` );
-      const trusted = trust.find( coin => coin.symbol == symbol );
+      const coin = coins.find( coin => coin.symbol == symbol );
+      const fileTrust = coin ? path.join( "trustwallet", "assets", "blockchains", coin.id, "info", "info.json" ) : null; // HARD-CODED
+      const trusted = fs.existsSync( fileTrust ) ? JSON.parse( fs.readFileSync( fileTrust, "utf-8" ) ) : null;
       const name = trusted && trusted.name || await prompt( `Enter the name of the token: ` ).catch( e => { throw e } );
+      const fileAsset = path.join( "assets", lowercased, "asset.json" ); // HARD-CODED
+      const fileMetadata = path.join( "assets", lowercased, "metadata", "info.json" ); // HARD-CODED
       const asset = {
-         "caip-20": "",
-         "name": name,
-         "starname-uri": `asset:${lowercased}`,
+         "caip-19": "",
          "symbol": symbol,
-         "trust-wallet-coinId": trusted ? trusted.coinId : null,
+         "trustwallet-uid": coin ? `c${coin.coinId}` : null,
+      };
+      const metadata = {
+         "starname-uri": `asset:${lowercased}`,
+         "trustwallet-info": trusted ? `/${fileTrust}` : null,
       };
 
-      fs.writeFileSync( file, stringify( asset, { space: "  " } ) + "\n" );
-      console.log( `Wrote ${file}.` );
+      if ( !trusted ) {
+         asset.logo = fileMetadata.replace( "info.json", "logo.png" ); // HARD-CODED
+         asset.name = name;
+      }
+
+      fs.mkdirSync( path.join( "assets", lowercased, "metadata" ), { recursive: true } );
+      fs.writeFileSync( fileAsset,    stringify( asset,    { space: "  " } ) + "\n" );
+      fs.writeFileSync( fileMetadata, stringify( metadata, { space: "  " } ) + "\n" );
+      console.log( `Wrote ${fileAsset} and ${fileMetadata}.` );
    }
 }
 
