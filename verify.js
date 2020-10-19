@@ -80,9 +80,9 @@ fs.readdirSync( "assets" ).filter( dir => fs.statSync( path.join( "assets", dir 
       // check logo
       const fileLogo = metadata["trustwallet-info"] ? path.join( ".", ...metadata["trustwallet-info"].replace( "info.json", "logo.png" ).split( "/" ) ) : null; // HARD-CODED
 
-      if ( !asset.logo && fileLogo && !fs.existsSync( fileLogo )) {
+      if ( !asset.logo && ( ( fileLogo && !fs.existsSync( fileLogo ) ) || !fileLogo ) ) {
          error = true;
-         console.error( `Missing logo '${fileLogo}'!` );
+         console.error( `Missing logo for symbol '${symbol}!'` );
       }
 
       // add to assets
