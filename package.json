@@ -1,6 +1,6 @@
 {
    "name": "@iov/asset-directory",
-   "version": "2.0.0",
+   "version": "2.0.1",
    "description": "Metadata for assets in the Starname ecosystem",
    "repository": "https://github.com/iov-one/asset-directory.git",
    "files": [
@@ -12,8 +12,10 @@
       "access": "public"
    },
    "devDependencies": {
+      "@cosmjs/encoding": "^0.23.0",
       "husky": "^4.3.0",
-      "json-stable-stringify": "^1.0.1"
+      "json-stable-stringify": "^1.0.1",
+      "node-fetch": "^2.6.1"
    },
    "husky": {
       "hooks": {
@@ -27,8 +29,5 @@
       "format": "node format.js",
       "verify": "node verify.js"
    },
-   "dependencies": {
-      "@cosmjs/encoding": "^0.23.0",
-      "node-fetch": "^2.6.1"
-   }
+   "dependencies": {}
 }
