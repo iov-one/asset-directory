@@ -4,9 +4,14 @@ const stringify = require( "json-stable-stringify" );
 
 
 process.chdir( path.join( ".", "assets" ) );
-fs.readdirSync( "." ).forEach( file => {
-   const json = fs.readFileSync( file, "utf-8" );
-   const o = JSON.parse( json );
+fs.readdirSync( "." ).filter( dir => fs.statSync( dir ).isDirectory() ).forEach( dir => {
+   const fileAsset = path.join( dir, "asset.json" ); // HARD-CODED
+   const fileMetadata = path.join( dir, "metadata", "info.json" ); // HARD-CODED
+   const jsonAsset = fs.readFileSync( fileAsset, "utf-8" );
+   const jsonMetadata = fs.readFileSync( fileMetadata, "utf-8" );
+   const asset = JSON.parse( jsonAsset );
+   const metadata = JSON.parse( jsonMetadata );
 
-   fs.writeFileSync( file, stringify( o, { space: "  " } ) + "\n" );
+   fs.writeFileSync( fileAsset, stringify( asset, { space: "  " } ) + "\n" );
+   fs.writeFileSync( fileMetadata, stringify( metadata, { space: "  " } ) + "\n" );
 } );
