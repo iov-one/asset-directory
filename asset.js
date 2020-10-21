@@ -34,7 +34,7 @@ const main = async () => {
       const fileAsset = path.join( "assets", lowercased, "asset.json" ); // HARD-CODED
       const fileMetadata = path.join( "assets", lowercased, "metadata", "info.json" ); // HARD-CODED
       const asset = {
-         "caip-19": "",
+         "caip-19": null,
          "symbol": symbol,
          "trustwallet-uid": coin ? `c${coin.coinId}` : null,
       };

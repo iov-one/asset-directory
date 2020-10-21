@@ -5,8 +5,30 @@ const stringify = require( "json-stable-stringify" );
 
 "use strict";
 
+const fileWriter = ( file, assets ) => {
+   fs.writeFileSync( file, stringify( assets.sort( ( a, b ) => a.symbol.localeCompare( b.symbol ) ), { space: "  " } ) + "\n" );
+}
 
-const assets = fs.readdirSync( "assets" ).filter( dir => fs.statSync( path.join( "assets", dir ) ).isDirectory() ).map( dir => {
+// asset directories
+const dirs = fs.readdirSync( "assets" ).filter( dir => fs.statSync( path.join( "assets", dir ) ).isDirectory() );
+
+// ./assets.json
+const assets = dirs.map( dir => {
+   const fileAsset = path.join( "assets", dir, "asset.json" ); // HARD-CODED
+   const jsonAsset = fs.readFileSync( fileAsset, "utf-8" );
+   const asset = JSON.parse( jsonAsset );
+
+   // drop starname properties
+   delete( asset.logo );
+   delete( asset.name );
+
+   return asset;
+} );
+
+fileWriter( "assets.json", assets ); // HARD-CODED
+
+// ./starname/assets.json
+const starnameAssets = dirs.map( dir => {
    const fileAsset = path.join( "assets", dir, "asset.json" ); // HARD-CODED
    const fileMetadata = path.join( "assets", dir, "metadata", "info.json" ); // HARD-CODED
    const jsonAsset = fs.readFileSync( fileAsset, "utf-8" );
@@ -15,6 +37,10 @@ const assets = fs.readdirSync( "assets" ).filter( dir => fs.statSync( path.join(
    const metadata = JSON.parse( jsonMetadata );
 
    Object.keys( metadata ).forEach( key => asset[key] = metadata[key] );
+
+   // drop trustwallet properties
+   delete( asset["trustwallet-info"] );
+   delete( asset["trustwallet-uid"] );
 
    // possibly inject name
    if ( !asset.name ) {
@@ -31,15 +57,13 @@ const assets = fs.readdirSync( "assets" ).filter( dir => fs.statSync( path.join(
    }
 
    // replace logo with base64
-   try { // dmjp
    const fileLogo = asset.logo || path.join( ".", metadata["trustwallet-info"].replace( "info.json", "logo.png" ) ); // HARD-CODED
    const binary = fs.readFileSync( fileLogo );
    const logo = encoding.toBase64( binary );
 
    asset.logo = `data:image/png;base64,${logo}`;
-   } catch (e ) {}
 
    return asset;
 } );
 
-fs.writeFileSync( "assets.json", stringify( assets.sort( ( a, b ) => a.symbol.localeCompare( b.symbol ) ), { space: "  " } ) + "\n" );
+fileWriter( path.join( "starname", "assets.json" ), starnameAssets ); // HARD-CODED
