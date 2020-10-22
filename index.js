@@ -1,4 +1,4 @@
-('use strict');
+("use strict");
 
-export const assets = require('./assets');
-export const assetsStarname = require('./starname/assets');
+export const assets = require("./assets");
+export const assetsStarname = require("./starname/assets");
