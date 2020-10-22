@@ -1,5 +1,3 @@
-const path = require("path");
-
 ("use strict");
 
 export const assets = require("./assets");
