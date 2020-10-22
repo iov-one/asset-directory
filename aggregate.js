@@ -44,7 +44,7 @@ const assets = dirs.map((dir) => {
   return asset;
 });
 
-javascriptFileWritter('asset.js', assets); // HARD-CODED
+javascriptFileWritter('assets.js', assets); // HARD-CODED
 jsonFileWritter('assets.json', assets); // HARD-CODED
 
 // ./starname/assets.json
