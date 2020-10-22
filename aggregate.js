@@ -91,5 +91,5 @@ const starnameAssets = dirs.map((dir) => {
   return asset;
 });
 
-javascriptFileWritter(path.join("starname", "assets.json"), starnameAssets); // HARD-CODED
+javascriptFileWritter(path.join("starname", "assets.js"), starnameAssets); // HARD-CODED
 jsonFileWritter(path.join("starname", "assets.json"), starnameAssets); // HARD-CODED
