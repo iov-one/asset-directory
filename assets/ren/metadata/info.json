@@ -1,6 +1,6 @@
 {
-  "starname-uri": "asset:ren",
-  "trustwallet-info": null,
   "logo": "assets/ren/metadata/logo.png",
-  "name": "Ren"
+  "name": "Ren",
+  "starname-uri": "asset:ren",
+  "trustwallet-info": null
 }

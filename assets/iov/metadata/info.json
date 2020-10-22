@@ -1,6 +1,6 @@
 {
-  "starname-uri": "asset:iov",
-  "trustwallet-info": null,
   "logo": "assets/iov/metadata/logo.png",
-  "name": "Starname (IOV)"
+  "name": "Starname (IOV)",
+  "starname-uri": "asset:iov",
+  "trustwallet-info": null
 }
