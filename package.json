@@ -31,7 +31,7 @@
     "add-asset": "node asset.js",
     "format": "node format.js",
     "verify": "node verify.js",
-    "formatPrettier": "yarn prettier --write ."
+    "formatPrettier": "yarn prettier --write --loglevel warn './**/*{js, json, md}'"
   },
   "dependencies": {}
 }
