@@ -1,10 +1,11 @@
 {
    "name": "@iov/asset-directory",
-   "version": "3.0.0",
+   "version": "3.0.1",
    "description": "Metadata for assets in the Starname ecosystem",
    "repository": "https://github.com/iov-one/asset-directory.git",
    "files": [
       "assets.json",
+      "index.js",
       "starname/assets.json"
    ],
    "author": "IOV SAS <admin@iov.one>",
