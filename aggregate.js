@@ -5,13 +5,24 @@ const stringify = require("json-stable-stringify");
 
 ("use strict");
 
-const fileWriter = (file, assets) => {
+const jsonFileWritter = (file, assets) => {
   fs.writeFileSync(
     file,
     stringify(
       assets.sort((a, b) => a.symbol.localeCompare(b.symbol)),
       { space: "  " },
     ) + "\n",
+  );
+};
+const javascriptFileWritter = (file, assets) => {
+  fs.writeFileSync(
+    file,
+    "export default " +
+      stringify(
+        assets.sort((a, b) => a.symbol.localeCompare(b.symbol)),
+        { space: "  " },
+      ) +
+      "\n",
   );
 };
 
@@ -33,7 +44,8 @@ const assets = dirs.map((dir) => {
   return asset;
 });
 
-fileWriter("assets.json", assets); // HARD-CODED
+javascriptFileWritter("asset.js", assets); // HARD-CODED
+jsonFileWritter("assets.json", assets); // HARD-CODED
 
 // ./starname/assets.json
 const starnameAssets = dirs.map((dir) => {
@@ -79,4 +91,5 @@ const starnameAssets = dirs.map((dir) => {
   return asset;
 });
 
-fileWriter(path.join("starname", "assets.json"), starnameAssets); // HARD-CODED
+javascriptFileWritter(path.join("starname", "assets.json"), starnameAssets); // HARD-CODED
+jsonFileWritter(path.join("starname", "assets.json"), starnameAssets); // HARD-CODED
