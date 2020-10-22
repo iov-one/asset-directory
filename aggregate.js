@@ -48,6 +48,7 @@ javascriptFileWritter("assets.js", assets); // HARD-CODED
 jsonFileWritter("assets.json", assets); // HARD-CODED
 
 // ./starname/assets.json
+
 const starnameAssets = dirs.map((dir) => {
   const fileAsset = path.join("assets", dir, "asset.json"); // HARD-CODED
   const fileMetadata = path.join("assets", dir, "metadata", "info.json"); // HARD-CODED
