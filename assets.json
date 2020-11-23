@@ -40,9 +40,9 @@
     "trustwallet-uid": "c0"
   },
   {
-    "caip-19": "???:1/erc20:0x765DE816845861e75A25fCA122bb6898B8B1282a",
+    "caip-19": null,
     "symbol": "CELO",
-    "trustwallet-uid": "???"
+    "trustwallet-uid": "c52752"
   },
   {
     "caip-19": "eip155:1/erc20:0xc00e94cb662c3520282e6f5717214004a7f26888",
