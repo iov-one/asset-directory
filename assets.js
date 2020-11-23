@@ -40,6 +40,11 @@ export default [
     "trustwallet-uid": "c0"
   },
   {
+    "caip-19": null,
+    "symbol": "CELO",
+    "trustwallet-uid": "c52752"
+  },
+  {
     "caip-19": "eip155:1/erc20:0xc00e94cb662c3520282e6f5717214004a7f26888",
     "symbol": "COMP",
     "trustwallet-uid": "c60_t0xc00e94cb662c3520282e6f5717214004a7f26888"
