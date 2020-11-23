@@ -120,9 +120,9 @@
     "trustwallet-uid": "c60_t0x75231f58b43240c9718dd58b4967c5114342a86c"
   },
   {
-    "caip-19": null,
+    "caip-19": "eip155:1/erc20:0x408e41876cCCDC0F92210600ef50372656052a38",
     "symbol": "REN",
-    "trustwallet-uid": null
+    "trustwallet-uid": "c60_t0x408e41876cCCDC0F92210600ef50372656052a38"
   },
   {
     "caip-19": "cosmos:secret-2/slip44:529",
