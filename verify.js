@@ -48,7 +48,6 @@ fs.readdirSync("assets")
 
       // check congruency
       if (metadata["starname-uri"] != `asset:${symbol}`) {
-        // HARD-CODED
         error = true;
         console.error(
           `Invalid uri of '${metadata["starname-uri"]}' in ${fileMetadata}; should be 'asset:${symbol}'.`,
@@ -66,7 +65,7 @@ fs.readdirSync("assets")
       }
 
       // check name
-      if (!asset.name) {
+      if (!asset.name && fileInfo) {
         const jsonInfo = fs.readFileSync(fileInfo);
         const info = JSON.parse(jsonInfo);
 
@@ -84,7 +83,7 @@ fs.readdirSync("assets")
               .replace("info.json", "logo.png")
               .split("/"),
           )
-        : null; // HARD-CODED
+        : path.join( "assets", symbol, "metadata", "logo.png" );
 
       if (
         !asset.logo &&
