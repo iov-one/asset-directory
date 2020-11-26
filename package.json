@@ -1,14 +1,14 @@
 {
-  "name": "@iov/asset-directory",
+  "name": "@ucregistry/asset-directory",
   "version": "3.1.5",
-  "description": "Metadata for assets in the Starname ecosystem",
-  "repository": "https://github.com/iov-one/asset-directory.git",
+  "description": "Metadata for crypto assets",
+  "repository": "https://github.com/orgs/UCRegistry/asset-directory.git",
   "files": [
     "assets.json",
     "index.js",
     "starname/assets.json"
   ],
-  "author": "IOV SAS <admin@iov.one>",
+  "author": "https://github.com/orgs/UCRegistry/teams/maintainers",
   "license": "Apache-2.0",
   "publishConfig": {
     "access": "public"
