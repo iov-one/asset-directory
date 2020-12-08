@@ -156,7 +156,7 @@ export default [
   },
   {
     "caip-19": "eip155:1/erc20:0x761d827e90b1bd013f57289ed36e68ef42ef6f33",
-    "symbol": "wIOV",
+    "symbol": "WIOV",
     "trustwallet-uid": null
   },
   {
