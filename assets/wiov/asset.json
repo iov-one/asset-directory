@@ -1,7 +1,0 @@
-{
-  "caip-19": "eip155:1/erc20:0x175D9Dfd6850AA96460E29bC0cEad05756965E91",
-  "logo": "assets/wiov/metadata/logo.png",
-  "name": "ERC20 version of the IOV token",
-  "symbol": "WIOV",
-  "trustwallet-uid": null
-}
