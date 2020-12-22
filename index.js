@@ -1,4 +1,6 @@
 ("use strict");
 
-export const assets = require("./assets");
-export const assetsStarname = require("./starname/assets");
+module.exports = {
+ assets: require("./assets").default,
+ assetsStarname: require("./starname/assets").default,
+}

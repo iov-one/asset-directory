@@ -1,6 +1,7 @@
 {
-  "logo": "assets/iov/metadata/logo.png",
+  "logo": "/metadata/iov/logo.png",
   "name": "Starname (IOV)",
+  "rest-api-url": "https://lcd-private-iov-mainnet-2.iov.one",
   "starname-uri": "asset:iov",
   "trustwallet-info": null
 }

@@ -2,12 +2,11 @@ const fs = require("fs");
 const path = require("path");
 const stringify = require("json-stable-stringify");
 
-process.chdir(path.join(".", "assets"));
-fs.readdirSync(".")
-  .filter((dir) => fs.statSync(dir).isDirectory())
+fs.readdirSync(path.join("asset-directory", "assets"))
+  .filter((dir) => fs.statSync(path.join("asset-directory", "assets", dir)).isDirectory())
   .forEach((dir) => {
-    const fileAsset = path.join(dir, "asset.json"); // HARD-CODED
-    const fileMetadata = path.join(dir, "metadata", "info.json"); // HARD-CODED
+    const fileAsset = path.join("asset-directory", "assets", dir, "asset.json"); // HARD-CODED
+    const fileMetadata = path.join("metadata", dir, "info.json"); // HARD-CODED
     const jsonAsset = fs.readFileSync(fileAsset, "utf-8");
     const jsonMetadata = fs.readFileSync(fileMetadata, "utf-8");
     const asset = JSON.parse(jsonAsset);

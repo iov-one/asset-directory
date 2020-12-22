@@ -1,4 +1,5 @@
 {
+  "rest-api-url": "https://api.binance.com/",
   "starname-uri": "asset:bnb",
   "trustwallet-info": "/trustwallet/assets/blockchains/binance/info/info.json"
 }

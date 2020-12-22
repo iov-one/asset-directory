@@ -85,17 +85,17 @@ export default [
     "trustwallet-uid": "c234"
   },
   {
-    "caip-19": "cosmos:irishub/slip44:566",
+    "caip-19": "cosmos:irisnet/slip44:566",
     "symbol": "IRIS",
     "trustwallet-uid": "c566"
   },
   {
-    "caip-19": "cosmos:kava-3/slip44:459",
+    "caip-19": "cosmos:kava-4/slip44:459",
     "symbol": "KAVA",
     "trustwallet-uid": "c459"
   },
   {
-    "caip-19": null,
+    "caip-19": "polkadot:b0a8d493285c2df73290dfb7e61f870f/slip44:434",
     "symbol": "KSM",
     "trustwallet-uid": "c434"
   },
@@ -153,11 +153,6 @@ export default [
     "caip-19": "eip155:1/erc20:0x2260fac5e5542a773aa44fbcfedf7c193bc2c599",
     "symbol": "WBTC",
     "trustwallet-uid": "c60_t0x2260fac5e5542a773aa44fbcfedf7c193bc2c599"
-  },
-  {
-    "caip-19": "eip155:1/erc20:0x175D9Dfd6850AA96460E29bC0cEad05756965E91",
-    "symbol": "WIOV",
-    "trustwallet-uid": null
   },
   {
     "caip-19": null,
