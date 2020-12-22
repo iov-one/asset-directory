@@ -1,5 +1,6 @@
 {
   "name": "Band Protocol",
+  "rest-api-url": "https://api.binance.com/",
   "starname-uri": "asset:band",
   "trustwallet-info": "/trustwallet/assets/blockchains/band/info/info.json"
 }

@@ -1,4 +1,5 @@
 {
+  "rest-api-url": "https://kava3.data.kava.io",
   "starname-uri": "asset:kava",
   "trustwallet-info": "/trustwallet/assets/blockchains/kava/info/info.json"
 }

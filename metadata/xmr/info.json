@@ -1,5 +1,5 @@
 {
-  "logo": "assets/xmr/metadata/logo.png",
+  "logo": "/metadata/xmr/logo.png",
   "name": "Monero",
   "starname-uri": "asset:xmr",
   "trustwallet-info": null
