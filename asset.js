@@ -77,6 +77,9 @@ const main = async () => {
       asset.name = name;
     }
 
+    fs.mkdirSync(path.join("assets", lowercased), {
+      recursive: true,
+    });
     fs.mkdirSync(path.join("metadata", lowercased), {
       recursive: true,
     });
