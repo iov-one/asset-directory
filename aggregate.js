@@ -70,7 +70,7 @@ const starnameAssets = [].concat(dirs, dirsStarname).map((dir) => { // order mat
   const asset = {
     ...JSON.parse(jsonAsset),
     ...metadata,
-  };
+  }.filter( asset => !!asset ); // filter null(s)
 
   // drop trustwallet properties
   delete asset["trustwallet-info"];
