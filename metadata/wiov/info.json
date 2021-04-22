@@ -1,4 +1,6 @@
 {
+  "logo": "/metadata/wiov/logo.png",
+  "name": "ERC20 version of the IOV token",
   "starname-uri": "asset:wiov",
   "trustwallet-info": null
 }

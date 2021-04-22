@@ -26,16 +26,16 @@ const javascriptFileWritter = (file, assets) => {
   );
 };
 
-// asset directories
+// UCRegistry asset directory
 const dirs = fs
-  .readdirSync(path.join("asset-directory", "assets"))
+  .readdirSync(path.join("UCRegistry", "assets", "assets"))
   .filter((dir) =>
-    fs.statSync(path.join("asset-directory", "assets", dir)).isDirectory(),
+    fs.statSync(path.join("UCRegistry", "assets", "assets", dir)).isDirectory(),
   );
 
 // ./assets.json
 const assets = dirs.map((dir) => {
-  const fileAsset = path.join("asset-directory", "assets", dir, "asset.json"); // HARD-CODED
+  const fileAsset = path.join("UCRegistry", "assets", "assets", dir, "asset.json"); // HARD-CODED
   const jsonAsset = fs.readFileSync(fileAsset, "utf-8");
   const asset = JSON.parse(jsonAsset);
 
@@ -49,10 +49,23 @@ const assets = dirs.map((dir) => {
 javascriptFileWritter("assets.js", assets); // HARD-CODED
 jsonFileWritter("assets.json", assets); // HARD-CODED
 
+// Starname asset directory
+const dirsStarname = fs
+  .readdirSync(path.join(".", "assets"))
+  .filter((dir) =>
+    fs.statSync(path.join(".", "assets", dir)).isDirectory(),
+  );
+
 // ./starname/assets.json
-const starnameAssets = dirs.map((dir) => {
-  const fileAsset = path.join("asset-directory", "assets", dir, "asset.json"); // HARD-CODED
+console.log( dirs ); // dmjp
+const starnameAssets = [].concat(dirs, dirsStarname).map((dir) => { // order matters: put UCRegistry in front of Starname
+   console.log(dir); // dmjp
+  const root = dirs.includes(dir) ? path.join("UCRegistry", "assets") : "."; // HARD-CODED
+  const fileAsset = path.join(root, "assets", dir, "asset.json"); // HARD-CODED
   const fileMetadata = path.join("metadata", dir, "info.json"); // HARD-CODED
+
+  if ( !fs.existsSync( fileMetadata ) ) return;
+
   const jsonAsset = fs.readFileSync(fileAsset, "utf-8");
   const jsonMetadata = fs.readFileSync(fileMetadata, "utf-8");
   const metadata = JSON.parse(jsonMetadata);
