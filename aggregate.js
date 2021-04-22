@@ -28,14 +28,14 @@ const javascriptFileWritter = (file, assets) => {
 
 // UCRegistry asset directory
 const dirs = fs
-  .readdirSync(path.join("UCRegistry", "assets", "assets"))
+  .readdirSync(path.join("UCRegistry", "assets"))
   .filter((dir) =>
-    fs.statSync(path.join("UCRegistry", "assets", "assets", dir)).isDirectory(),
+    fs.statSync(path.join("UCRegistry", "assets", dir)).isDirectory(),
   );
 
 // ./assets.json
 const assets = dirs.map((dir) => {
-  const fileAsset = path.join("UCRegistry", "assets", "assets", dir, "asset.json"); // HARD-CODED
+  const fileAsset = path.join("UCRegistry", "assets", dir, "asset.json"); // HARD-CODED
   const jsonAsset = fs.readFileSync(fileAsset, "utf-8");
   const asset = JSON.parse(jsonAsset);
 
@@ -58,7 +58,7 @@ const dirsStarname = fs
 
 // ./starname/assets.json
 const starnameAssets = [].concat(dirs, dirsStarname).map((dir) => { // order matters: put UCRegistry in front of Starname
-  const root = dirs.includes(dir) ? path.join("UCRegistry", "assets") : "."; // HARD-CODED
+  const root = dirs.includes(dir) ? "UCRegistry" : "."; // HARD-CODED
   const fileAsset = path.join(root, "assets", dir, "asset.json"); // HARD-CODED
   const fileMetadata = path.join("metadata", dir, "info.json"); // HARD-CODED
 
