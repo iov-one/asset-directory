@@ -57,9 +57,7 @@ const dirsStarname = fs
   );
 
 // ./starname/assets.json
-console.log( dirs ); // dmjp
 const starnameAssets = [].concat(dirs, dirsStarname).map((dir) => { // order matters: put UCRegistry in front of Starname
-   console.log(dir); // dmjp
   const root = dirs.includes(dir) ? path.join("UCRegistry", "assets") : "."; // HARD-CODED
   const fileAsset = path.join(root, "assets", dir, "asset.json"); // HARD-CODED
   const fileMetadata = path.join("metadata", dir, "info.json"); // HARD-CODED
