@@ -1,19 +1,18 @@
-# Digital Assets Directory #
-￼
-￼To add an asset to the directory simply fork this repo and do
-￼
-￼```sh
-￼export MY_FORK=github_id # replace 'github_id' with your github id
-￼git clone --recurse-submodules https://github.com/${MY_FORK}/asset-directory.git \
-￼  && cd asset-directory \
+# Digital Asset Directory #
+
+To add an asset to the directory simply fork this repo and do
+
+```sh
+MY_FORK=github_id # replace 'github_id' with your github id
+clone --recurse-submodules https://github.com/${MY_FORK}/asset-directory.git \
+  && cd asset-directory \
 ￼  && yarn install \
 ￼  && yarn add-asset \
 ￼  && yarn aggregate
-￼```
-￼
-￼and follow the prompt(s).  Commit your changes, push, and then submit a PR.
-￼
-￼# Scripts #
+```
+follow the prompt(s).  Commit your changes, push, and then submit a PR.
+
+# Scripts #
 
 - [asset.js](asset.js) - adds an asset to the directory
 - [format.js](format.js) - formats all assets' json consistently, ie alphabetically sorts keys; called by the `git pre-commit` hook
