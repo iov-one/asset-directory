@@ -7,10 +7,10 @@ const assets = {};
 const propsAsset = ["caip-19", "symbol", "trustwallet-uid"];
 const propsMetadata = ["starname-uri", "trustwallet-info"];
 
-fs.readdirSync(path.join("asset-directory", "assets"))
-  .filter((dir) => fs.statSync(path.join("asset-directory", "assets", dir)).isDirectory())
+fs.readdirSync(path.join(".", "assets"))
+  .filter((dir) => fs.statSync(path.join(".", "assets", dir)).isDirectory())
   .forEach((dir) => {
-    const fileAsset = path.join("asset-directory", "assets", dir, "asset.json"); // HARD-CODED
+    const fileAsset = path.join(".", "assets", dir, "asset.json"); // HARD-CODED
     const fileMetadata = path.join("metadata", dir, "info.json"); // HARD-CODED
     const jsonAsset = fs.readFileSync(fileAsset, "utf-8");
     const jsonMetadata = fs.readFileSync(fileMetadata, "utf-8");

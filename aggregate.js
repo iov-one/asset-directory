@@ -26,16 +26,16 @@ const javascriptFileWritter = (file, assets) => {
   );
 };
 
-// asset directories
+// UCRegistry asset directory
 const dirs = fs
-  .readdirSync(path.join("asset-directory", "assets"))
+  .readdirSync(path.join("UCRegistry", "assets"))
   .filter((dir) =>
-    fs.statSync(path.join("asset-directory", "assets", dir)).isDirectory(),
+    fs.statSync(path.join("UCRegistry", "assets", dir)).isDirectory(),
   );
 
 // ./assets.json
 const assets = dirs.map((dir) => {
-  const fileAsset = path.join("asset-directory", "assets", dir, "asset.json"); // HARD-CODED
+  const fileAsset = path.join("UCRegistry", "assets", dir, "asset.json"); // HARD-CODED
   const jsonAsset = fs.readFileSync(fileAsset, "utf-8");
   const asset = JSON.parse(jsonAsset);
 
@@ -49,17 +49,28 @@ const assets = dirs.map((dir) => {
 javascriptFileWritter("assets.js", assets); // HARD-CODED
 jsonFileWritter("assets.json", assets); // HARD-CODED
 
+// Starname asset directory
+const dirsStarname = fs
+  .readdirSync(path.join(".", "assets"))
+  .filter((dir) =>
+    fs.statSync(path.join(".", "assets", dir)).isDirectory(),
+  );
+
 // ./starname/assets.json
-const starnameAssets = dirs.map((dir) => {
-  const fileAsset = path.join("asset-directory", "assets", dir, "asset.json"); // HARD-CODED
+const starnameAssets = [].concat(dirs, dirsStarname).map((dir) => { // order matters: put UCRegistry in front of Starname
+  const root = dirs.includes(dir) ? "UCRegistry" : "."; // HARD-CODED
+  const fileAsset = path.join(root, "assets", dir, "asset.json"); // HARD-CODED
   const fileMetadata = path.join("metadata", dir, "info.json"); // HARD-CODED
+
+  if ( !fs.existsSync( fileMetadata ) ) return;
+
   const jsonAsset = fs.readFileSync(fileAsset, "utf-8");
   const jsonMetadata = fs.readFileSync(fileMetadata, "utf-8");
   const metadata = JSON.parse(jsonMetadata);
   const asset = {
     ...JSON.parse(jsonAsset),
     ...metadata,
-  };
+  }
 
   // drop trustwallet properties
   delete asset["trustwallet-info"];
@@ -92,7 +103,7 @@ const starnameAssets = dirs.map((dir) => {
   asset.logo = `data:image/png;base64,${logo}`;
 
   return asset;
-});
+}).filter( asset => !!asset ); // filter null(s)
 
 javascriptFileWritter(path.join("starname", "assets.js"), starnameAssets); // HARD-CODED
 jsonFileWritter(path.join("starname", "assets.json"), starnameAssets); // HARD-CODED

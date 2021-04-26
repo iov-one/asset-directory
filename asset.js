@@ -58,9 +58,8 @@ const main = async () => {
       }));
     const fileAsset = path.join("assets", lowercased, "asset.json"); // HARD-CODED
     const fileMetadata = path.join(
-      "assets",
-      lowercased,
       "metadata",
+      lowercased,
       "info.json",
     ); // HARD-CODED
     const asset = {
@@ -78,7 +77,10 @@ const main = async () => {
       asset.name = name;
     }
 
-    fs.mkdirSync(path.join("assets", lowercased, "metadata"), {
+    fs.mkdirSync(path.join("assets", lowercased), {
+      recursive: true,
+    });
+    fs.mkdirSync(path.join("metadata", lowercased), {
       recursive: true,
     });
     fs.writeFileSync(fileAsset, stringify(asset, { space: "  " }) + "\n");

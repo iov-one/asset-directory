@@ -5,6 +5,11 @@ export default [
     "trustwallet-uid": "c1815"
   },
   {
+    "caip-19": "eip155:1/erc20:0x27702a26126e0b3702af63ee09ac4d1a084ef628",
+    "symbol": "ALEPH",
+    "trustwallet-uid": "c60_t0x27702a26126e0b3702af63ee09ac4d1a084ef628"
+  },
+  {
     "caip-19": null,
     "symbol": "ALGO",
     "trustwallet-uid": "c283"
@@ -70,7 +75,7 @@ export default [
     "trustwallet-uid": "c354"
   },
   {
-    "caip-19": null,
+    "caip-19": "eosio:aca376f206b8fc25a6ed44dbdc66547c/slip44:194",
     "symbol": "EOS",
     "trustwallet-uid": "c194"
   },
@@ -85,12 +90,12 @@ export default [
     "trustwallet-uid": "c234"
   },
   {
-    "caip-19": "cosmos:irisnet/slip44:566",
+    "caip-19": "cosmos:irishub/slip44:566",
     "symbol": "IRIS",
     "trustwallet-uid": "c566"
   },
   {
-    "caip-19": "cosmos:kava-4/slip44:459",
+    "caip-19": "cosmos:kava-3/slip44:459",
     "symbol": "KAVA",
     "trustwallet-uid": "c459"
   },
@@ -153,6 +158,11 @@ export default [
     "caip-19": "eip155:1/erc20:0x2260fac5e5542a773aa44fbcfedf7c193bc2c599",
     "symbol": "WBTC",
     "trustwallet-uid": "c60_t0x2260fac5e5542a773aa44fbcfedf7c193bc2c599"
+  },
+  {
+    "caip-19": "eip155:1/erc20:0x175D9Dfd6850AA96460E29bC0cEad05756965E91",
+    "symbol": "WIOV",
+    "trustwallet-uid": "c60_t0x175D9Dfd6850AA96460E29bC0cEad05756965E91"
   },
   {
     "caip-19": null,
