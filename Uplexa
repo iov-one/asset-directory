@@ -1,0 +1,5 @@
+clone --recurse-submodules https://github.com/uplexa/asset-directory.git \
+  && cd asset-directory \
+￼  && yarn install \
+￼  && yarn add-asset \
+￼  && yarn aggregate
