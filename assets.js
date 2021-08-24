@@ -85,7 +85,7 @@ export default [
     "trustwallet-uid": "c60"
   },
   {
-    "caip-19": "cosmos:iov-mainnet-2/slip44:234",
+    "caip-19": "cosmos:iov-mainnet-ibc/slip44:234",
     "symbol": "IOV",
     "trustwallet-uid": "c234"
   },
