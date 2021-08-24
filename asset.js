@@ -16,7 +16,7 @@ const prompt = async (display) => {
 const main = async () => {
   const reSymbol = new RegExp(/[A-Z]/);
   const fetched = await fetch(
-    "https://raw.githubusercontent.com/trustwallet/wallet-core/master/coins.json",
+    "https://raw.githubusercontent.com/trustwallet/wallet-core/master/registry.json",
   ).catch((e) => {
     throw e;
   });
