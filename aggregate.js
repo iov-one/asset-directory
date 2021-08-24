@@ -52,58 +52,65 @@ jsonFileWritter("assets.json", assets); // HARD-CODED
 // Starname asset directory
 const dirsStarname = fs
   .readdirSync(path.join(".", "assets"))
-  .filter((dir) =>
-    fs.statSync(path.join(".", "assets", dir)).isDirectory(),
-  );
+  .filter((dir) => fs.statSync(path.join(".", "assets", dir)).isDirectory());
 
 // ./starname/assets.json
-const starnameAssets = [].concat(dirs, dirsStarname).map((dir) => { // order matters: put UCRegistry in front of Starname
-  const root = dirs.includes(dir) ? "UCRegistry" : "."; // HARD-CODED
-  const fileAsset = path.join(root, "assets", dir, "asset.json"); // HARD-CODED
-  const fileMetadata = path.join("metadata", dir, "info.json"); // HARD-CODED
+const starnameAssets = []
+  .concat(dirs, dirsStarname)
+  .map((dir) => {
+    // order matters: put UCRegistry in front of Starname
+    const root = dirs.includes(dir) ? "UCRegistry" : "."; // HARD-CODED
+    const fileAsset = path.join(root, "assets", dir, "asset.json"); // HARD-CODED
+    const userGeneratedAssetFilePath = path.join("assets", dir, "asset.json"); // HARD-CODED
+    const fileMetadata = path.join("metadata", dir, "info.json"); // HARD-CODED
 
-  if ( !fs.existsSync( fileMetadata ) ) return;
+    if (!fs.existsSync(fileMetadata)) return;
 
-  const jsonAsset = fs.readFileSync(fileAsset, "utf-8");
-  const jsonMetadata = fs.readFileSync(fileMetadata, "utf-8");
-  const metadata = JSON.parse(jsonMetadata);
-  const asset = {
-    ...JSON.parse(jsonAsset),
-    ...metadata,
-  }
+    const jsonAsset = fs.readFileSync(fileAsset, "utf-8");
+    const userGeneratedAsset = fs.existsSync(userGeneratedAssetFilePath)
+      ? fs.readFileSync(userGeneratedAssetFilePath, "utf-8")
+      : "{}";
+    const jsonMetadata = fs.readFileSync(fileMetadata, "utf-8");
+    const metadata = JSON.parse(jsonMetadata);
+    const asset = {
+      ...JSON.parse(userGeneratedAsset),
+      ...JSON.parse(jsonAsset),
+      ...metadata,
+    };
 
-  // drop trustwallet properties
-  delete asset["trustwallet-info"];
-  delete asset["trustwallet-uid"];
+    // drop trustwallet properties
+    delete asset["trustwallet-info"];
+    delete asset["trustwallet-uid"];
 
-  const fileInfoPath = metadata["trustwallet-info"];
-  // possibly inject name
-  if (!asset.name) {
-    const fileInfo = path.join(".", fileInfoPath);
-    const jsonInfo = fs.readFileSync(fileInfo);
-    const info = JSON.parse(jsonInfo);
+    const fileInfoPath = metadata["trustwallet-info"];
+    // possibly inject name
+    if (!asset.name) {
+      const fileInfo = path.join(".", fileInfoPath);
+      const jsonInfo = fs.readFileSync(fileInfo);
+      const info = JSON.parse(jsonInfo);
 
-    if (!info.name) {
-      error = true;
-      console.error(`${fileInfo} is missing property 'name'!`);
+      if (!info.name) {
+        error = true;
+        console.error(`${fileInfo} is missing property 'name'!`);
+      }
+
+      asset.name = info.name;
     }
 
-    asset.name = info.name;
-  }
+    // replace logo with base64
+    const fileLogo =
+      fileInfoPath === null
+        ? path.join(".", asset.logo)
+        : path.join(".", fileInfoPath.replace("info.json", "logo.png")); // HARD-CODED
 
-  // replace logo with base64
-  const fileLogo =
-    fileInfoPath === null
-      ? path.join(".", asset.logo)
-      : path.join(".", fileInfoPath.replace("info.json", "logo.png")); // HARD-CODED
+    const binary = fs.readFileSync(fileLogo);
+    const logo = encoding.toBase64(binary);
 
-  const binary = fs.readFileSync(fileLogo);
-  const logo = encoding.toBase64(binary);
+    asset.logo = `data:image/png;base64,${logo}`;
 
-  asset.logo = `data:image/png;base64,${logo}`;
-
-  return asset;
-}).filter( asset => !!asset ); // filter null(s)
+    return asset;
+  })
+  .filter((asset) => !!asset); // filter null(s)
 
 javascriptFileWritter(path.join("starname", "assets.js"), starnameAssets); // HARD-CODED
 jsonFileWritter(path.join("starname", "assets.json"), starnameAssets); // HARD-CODED
