@@ -4,7 +4,7 @@ To add an asset to the directory simply fork this repo and do
 
 ```sh
 MY_FORK=github_id # replace 'github_id' with your github id
-clone --recurse-submodules https://github.com/${MY_FORK}/asset-directory.git \
+git clone --recurse-submodules https://github.com/${MY_FORK}/asset-directory.git \
   && cd asset-directory \
 ￼  && yarn install \
 ￼  && yarn add-asset \
