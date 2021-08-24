@@ -1,6 +1,0 @@
-[submodule "trustwallet/assets"]
-	path = trustwallet/assets
-	url = https://github.com/trustwallet/assets
-[submodule "UCRegistry"]
-	path = UCRegistry
-	url = https://github.com/UCRegistry/asset-directory.git
