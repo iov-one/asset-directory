@@ -15,12 +15,12 @@ const prompt = async (display) => {
 
 const main = async () => {
   const reSymbol = new RegExp(/[A-Z]/);
-  const fetched = await fetch(
+  const trustwalletFetched = await fetch(
     "https://raw.githubusercontent.com/trustwallet/wallet-core/master/registry.json",
   ).catch((e) => {
     throw e;
   });
-  const coins = await fetched.json().catch((e) => {
+  const trustwalletCoins = await trustwalletFetched.json().catch((e) => {
     throw e;
   });
 
@@ -33,11 +33,12 @@ const main = async () => {
 
     if (!symbol.match(reSymbol))
       throw new Error(`Symbol should be mostly upper case, not '${symbol}'.`);
-    if (fs.existsSync(path.join("assets", symbol)))
-      throw new Error(`Asset for symbol ${symbol} already exists.`);
 
     const lowercased = symbol.toLowerCase();
-    const coin = coins.find((coin) => coin.symbol == symbol);
+    if (fs.existsSync(path.join("assets", lowercased)))
+      throw new Error(`Asset for symbol ${symbol} already exists.`);
+
+    const coin = trustwalletCoins.find((coin) => coin.symbol === symbol);
     const fileTrust = coin
       ? path.join(
           "trustwallet",
@@ -57,11 +58,7 @@ const main = async () => {
         throw e;
       }));
     const fileAsset = path.join("assets", lowercased, "asset.json"); // HARD-CODED
-    const fileMetadata = path.join(
-      "metadata",
-      lowercased,
-      "info.json",
-    ); // HARD-CODED
+    const fileMetadata = path.join("metadata", lowercased, "info.json"); // HARD-CODED
     const asset = {
       "caip-19": null,
       symbol: symbol,
