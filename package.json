@@ -29,6 +29,7 @@
   "scripts": {
     "aggregate": "node aggregate.js",
     "add-asset": "node asset.js",
+    "remove-asset": "node remove.js && yarn aggregate",
     "format": "node format.js",
     "verify": "node verify.js",
     "formatPrettier": "yarn prettier --write --loglevel warn './**/*{js, json, md}'"
