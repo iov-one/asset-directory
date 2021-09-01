@@ -52,7 +52,9 @@ const main = async () => {
     const trusted = fs.existsSync(fileTrust)
       ? JSON.parse(fs.readFileSync(fileTrust, "utf-8"))
       : null;
-    const trustBasedPromptMessage = `Specify name manually or press enter to use [${trusted.name}]: `;
+    const trustBasedPromptMessage = trusted
+      ? `Specify name manually or press enter to use [${trusted.name}]: `
+      : null;
     const normalPromptMessage = "Enter the name of token: ";
     const nameResponse = await prompt(
       trusted ? trustBasedPromptMessage : normalPromptMessage,
