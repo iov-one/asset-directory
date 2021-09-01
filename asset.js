@@ -52,11 +52,16 @@ const main = async () => {
     const trusted = fs.existsSync(fileTrust)
       ? JSON.parse(fs.readFileSync(fileTrust, "utf-8"))
       : null;
-    const name =
-      (trusted && trusted.name) ||
-      (await prompt(`Enter the name of the token: `).catch((e) => {
-        throw e;
-      }));
+    const trustBasedPromptMessage = `Specify name manually or press enter to use [${trusted.name}]: `;
+    const normalPromptMessage = "Enter the name of token: ";
+    const nameResponse = await prompt(
+      trusted ? trustBasedPromptMessage : normalPromptMessage,
+    ).catch((e) => {
+      throw e;
+    });
+    // use this boolean to check if user dont want to use trust asset
+    const nameOverride = nameResponse.length > 0;
+    const name = nameOverride ? nameResponse : trusted.name;
     const fileAsset = path.join("assets", lowercased, "asset.json"); // HARD-CODED
     const fileMetadata = path.join("metadata", lowercased, "info.json"); // HARD-CODED
     const asset = {
@@ -66,10 +71,10 @@ const main = async () => {
     };
     const metadata = {
       "starname-uri": `asset:${lowercased}`,
-      "trustwallet-info": trusted ? `/${fileTrust}` : null,
+      "trustwallet-info": trusted && !nameOverride ? `/${fileTrust}` : null,
     };
 
-    if (!trusted) {
+    if (!trusted || nameOverride) {
       asset.logo = fileMetadata.replace("info.json", "logo.png"); // HARD-CODED
       asset.name = name;
     }
