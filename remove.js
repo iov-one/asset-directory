@@ -33,7 +33,7 @@ const main = async () => {
   });
   const deletablePaths = calculateDeletablePaths(symbol.toLowerCase());
   if (deletablePaths.length > 0) {
-    console.log("Paths to be deleted:\n\n");
+    console.log("Paths to be deleted:\n");
     console.log(`${deletablePaths.join("\n")}`);
     const response = await prompt(
       `\nPress y to continue or Ctrl-c to quit: `,
