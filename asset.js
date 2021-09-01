@@ -15,12 +15,12 @@ const prompt = async (display) => {
 
 const main = async () => {
   const reSymbol = new RegExp(/[A-Z]/);
-  const fetched = await fetch(
+  const trustwalletFetched = await fetch(
     "https://raw.githubusercontent.com/trustwallet/wallet-core/master/registry.json",
   ).catch((e) => {
     throw e;
   });
-  const coins = await fetched.json().catch((e) => {
+  const trustwalletCoins = await trustwalletFetched.json().catch((e) => {
     throw e;
   });
 
@@ -33,11 +33,12 @@ const main = async () => {
 
     if (!symbol.match(reSymbol))
       throw new Error(`Symbol should be mostly upper case, not '${symbol}'.`);
-    if (fs.existsSync(path.join("assets", symbol)))
-      throw new Error(`Asset for symbol ${symbol} already exists.`);
 
     const lowercased = symbol.toLowerCase();
-    const coin = coins.find((coin) => coin.symbol == symbol);
+    if (fs.existsSync(path.join("assets", lowercased)))
+      throw new Error(`Asset for symbol ${symbol} already exists.`);
+
+    const coin = trustwalletCoins.find((coin) => coin.symbol === symbol);
     const fileTrust = coin
       ? path.join(
           "trustwallet",
@@ -51,17 +52,20 @@ const main = async () => {
     const trusted = fs.existsSync(fileTrust)
       ? JSON.parse(fs.readFileSync(fileTrust, "utf-8"))
       : null;
-    const name =
-      (trusted && trusted.name) ||
-      (await prompt(`Enter the name of the token: `).catch((e) => {
-        throw e;
-      }));
+    const trustBasedPromptMessage = trusted
+      ? `Specify name manually or press enter to use [${trusted.name}]: `
+      : null;
+    const normalPromptMessage = "Enter the name of token: ";
+    const nameResponse = await prompt(
+      trusted ? trustBasedPromptMessage : normalPromptMessage,
+    ).catch((e) => {
+      throw e;
+    });
+    // use this boolean to check if user dont want to use trust asset
+    const nameOverride = nameResponse.length > 0;
+    const name = nameOverride ? nameResponse : trusted.name;
     const fileAsset = path.join("assets", lowercased, "asset.json"); // HARD-CODED
-    const fileMetadata = path.join(
-      "metadata",
-      lowercased,
-      "info.json",
-    ); // HARD-CODED
+    const fileMetadata = path.join("metadata", lowercased, "info.json"); // HARD-CODED
     const asset = {
       "caip-19": null,
       symbol: symbol,
@@ -69,10 +73,10 @@ const main = async () => {
     };
     const metadata = {
       "starname-uri": `asset:${lowercased}`,
-      "trustwallet-info": trusted ? `/${fileTrust}` : null,
+      "trustwallet-info": trusted && !nameOverride ? `/${fileTrust}` : null,
     };
 
-    if (!trusted) {
+    if (!trusted || nameOverride) {
       asset.logo = fileMetadata.replace("info.json", "logo.png"); // HARD-CODED
       asset.name = name;
     }
