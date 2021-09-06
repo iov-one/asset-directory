@@ -15,7 +15,7 @@
     "trustwallet-uid": "c283"
   },
   {
-    "caip-19": "cosmos:cosmoshub-3/slip44:118",
+    "caip-19": "cosmos:cosmoshub-4/slip44:118",
     "symbol": "ATOM",
     "trustwallet-uid": "c118"
   },
@@ -90,12 +90,12 @@
     "trustwallet-uid": "c234"
   },
   {
-    "caip-19": "cosmos:irishub/slip44:566",
+    "caip-19": "cosmos:irishub-1/slip44:118",
     "symbol": "IRIS",
-    "trustwallet-uid": "c566"
+    "trustwallet-uid": null
   },
   {
-    "caip-19": "cosmos:kava-3/slip44:459",
+    "caip-19": "cosmos:kava-7/slip44:459",
     "symbol": "KAVA",
     "trustwallet-uid": "c459"
   },
