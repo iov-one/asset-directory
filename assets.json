@@ -5,6 +5,11 @@
     "trustwallet-uid": "c1815"
   },
   {
+    "caip-19": "cosmos:akashnet-2/slip44:118",
+    "symbol": "AKT",
+    "trustwallet-uid": null
+  },
+  {
     "caip-19": "eip155:1/erc20:0x27702a26126e0b3702af63ee09ac4d1a084ef628",
     "symbol": "ALEPH",
     "trustwallet-uid": "c60_t0x27702a26126e0b3702af63ee09ac4d1a084ef628"
@@ -15,7 +20,7 @@
     "trustwallet-uid": "c283"
   },
   {
-    "caip-19": "cosmos:cosmoshub-3/slip44:118",
+    "caip-19": "cosmos:cosmoshub-4/slip44:118",
     "symbol": "ATOM",
     "trustwallet-uid": "c118"
   },
@@ -55,9 +60,9 @@
     "trustwallet-uid": "c60_t0xc00e94cb662c3520282e6f5717214004a7f26888"
   },
   {
-    "caip-19": "eip155:1/erc20:0xa0b73e1ff0b80914ab6fe0444e65848c4c34450b",
+    "caip-19": "cosmos:crypto-org-chain-mainnet-1/slip44:394",
     "symbol": "CRO",
-    "trustwallet-uid": "c60_t0xa0b73e1ff0b80914ab6fe0444e65848c4c34450b"
+    "trustwallet-uid": null
   },
   {
     "caip-19": "eip155:1/erc20:0x6b175474e89094c44da98b954eedeac495271d0f",
@@ -75,9 +80,19 @@
     "trustwallet-uid": "c354"
   },
   {
+    "caip-19": "cosmos:sentinelhub-2/slip44:118",
+    "symbol": "DVPN",
+    "trustwallet-uid": null
+  },
+  {
     "caip-19": "eosio:aca376f206b8fc25a6ed44dbdc66547c/slip44:194",
     "symbol": "EOS",
     "trustwallet-uid": "c194"
+  },
+  {
+    "caip-19": "cosmos:sifchain-1/slip44:118",
+    "symbol": "EROWAN",
+    "trustwallet-uid": null
   },
   {
     "caip-19": "eip155:1/slip44:60",
@@ -90,12 +105,12 @@
     "trustwallet-uid": "c234"
   },
   {
-    "caip-19": "cosmos:irishub/slip44:566",
+    "caip-19": "cosmos:irishub-1/slip44:118",
     "symbol": "IRIS",
-    "trustwallet-uid": "c566"
+    "trustwallet-uid": null
   },
   {
-    "caip-19": "cosmos:kava-3/slip44:459",
+    "caip-19": "cosmos:kava-7/slip44:459",
     "symbol": "KAVA",
     "trustwallet-uid": "c459"
   },
@@ -125,6 +140,16 @@
     "trustwallet-uid": "c60_t0x75231f58b43240c9718dd58b4967c5114342a86c"
   },
   {
+    "caip-19": "cosmos:osmosis-1/slip44:118",
+    "symbol": "OSMO",
+    "trustwallet-uid": null
+  },
+  {
+    "caip-19": "cosmos:regen-1/slip44:118",
+    "symbol": "REGEN",
+    "trustwallet-uid": null
+  },
+  {
     "caip-19": "eip155:1/erc20:0x408e41876cCCDC0F92210600ef50372656052a38",
     "symbol": "REN",
     "trustwallet-uid": "c60_t0x408e41876cCCDC0F92210600ef50372656052a38"
@@ -132,7 +157,7 @@
   {
     "caip-19": "cosmos:secret-2/slip44:529",
     "symbol": "SCRT",
-    "trustwallet-uid": "c529"
+    "trustwallet-uid": null
   },
   {
     "caip-19": "eip155:1/erc20:0x0646303daea310c9fc42cb5894899cf2a087c45d",
@@ -168,6 +193,11 @@
     "caip-19": null,
     "symbol": "XMR",
     "trustwallet-uid": "c128"
+  },
+  {
+    "caip-19": "cosmos:core-1/slip44:750",
+    "symbol": "XPRT",
+    "trustwallet-uid": null
   },
   {
     "caip-19": null,
