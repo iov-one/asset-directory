@@ -65,6 +65,11 @@
     "trustwallet-uid": null
   },
   {
+    "caip-19": "cosmos:shentu-2.2/slip44:118",
+    "symbol": "CTK",
+    "trustwallet-uid": null
+  },
+  {
     "caip-19": "eip155:1/erc20:0x6b175474e89094c44da98b954eedeac495271d0f",
     "symbol": "DAI",
     "trustwallet-uid": "c60_t0x6b175474e89094c44da98b954eedeac495271d0f"
