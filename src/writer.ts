@@ -8,7 +8,7 @@ const fileWriter = (
   fileDir: string,
   assets: Array<Asset>,
 ): ReadonlyArray<Asset> => {
-  const oldAssets = originalAssets;
+  const oldAssets: ReadonlyArray<Asset> = originalAssets;
   fs.writeFileSync(
     `${fileDir}/assets.json`,
     stringify(
