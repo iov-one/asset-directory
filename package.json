@@ -1,6 +1,6 @@
 {
   "name": "test-projectt",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Metadata for crypto assets",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
