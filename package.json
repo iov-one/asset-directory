@@ -28,16 +28,13 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "yarn verify && yarn format",
-      "pre-push": "yarn verify && yarn aggregate && git diff --exit-code assets.json || ( echo '*** You need to commit assets.json. ***' ; false )"
+      "pre-push": "yarn aggregate && yarn build"
     }
   },
   "scripts": {
     "aggregate": "ts-node src/aggregate.ts",
     "add-asset": "ts-node src/asset.ts",
-    "remove-asset": "node remove.js && yarn aggregate",
-    "format": "node format.js",
-    "verify": "node verify.js",
+    "build": "rm -rf ./dist && tsc",
     "formatPrettier": "yarn prettier --write --loglevel warn './**/*{js, json, md}'"
   },
   "dependencies": {
