@@ -1,13 +1,12 @@
 {
   "name": "test-projectt",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Metadata for crypto assets",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": [
     "dist/",
-    "*.md",
-    "assets.json"
+    "*.md"
   ],
   "contributors": [
     "Jatin Sarda <jatin@iov.one>"
@@ -38,7 +37,7 @@
   "scripts": {
     "aggregate": "ts-node src/aggregate.ts",
     "add-asset": "ts-node src/asset.ts",
-    "build": "rm -rf ./dist && tsc",
+    "build": "rm -rf ./dist && tsc && cp ./src/starname/assets.json ./dist",
     "formatPrettier": "yarn prettier --write --loglevel warn './**/*{js, json, md}'"
   },
   "dependencies": {}
