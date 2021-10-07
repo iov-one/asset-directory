@@ -2,7 +2,7 @@ import fs = require("fs");
 import encoding = require("@cosmjs/encoding");
 import path = require("path");
 import { Asset } from "./types/asset";
-import { jsonFileWritter, typescriptFileWriter } from "./writers";
+import fileWriter from "./writer";
 
 const dirsStarname = fs
   .readdirSync(path.join("assets"))
@@ -31,5 +31,12 @@ const starnameAssets = dirsStarname.reduce((totalAssets, dir) => {
   return totalAssets;
 }, Array<Asset>());
 
-typescriptFileWriter("assets.ts", starnameAssets); // HARD-CODED
-jsonFileWritter("assets.json", starnameAssets); // HARD-CODED
+const generatedAssetsDirPath = path.join("src", "starname"); // HARD-CODED
+if (!fs.existsSync(generatedAssetsDirPath)) {
+  fs.mkdirSync(generatedAssetsDirPath);
+}
+
+const differences = fileWriter(generatedAssetsDirPath, starnameAssets);
+console.log(
+  `Successfully added ${differences.map((asset) => asset.symbol).join(",")}!`,
+);

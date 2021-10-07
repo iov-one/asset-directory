@@ -3,10 +3,12 @@
     "module": "CommonJS",
     "strict": true,
     "target": "ES2017",
+    "declaration": true,
+    "resolveJsonModule": true,
     "moduleResolution": "node",
+    "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
-    "baseUrl": ".",
-    "outDir": "dist",
+    "outDir": "dist"
   },
-  "include": ["index.ts"]
+  "include": ["src/index.ts"]
 }

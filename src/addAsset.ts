@@ -1,4 +1,5 @@
 import axios from "axios";
+import { exec } from "child_process";
 import { TrustWalletCoin } from "./types/trustwalletCoin";
 import { CoinGeckoCoin } from "./types/coingeckoCoin";
 import config from "./config";
@@ -6,10 +7,10 @@ import { Errors } from "./types/errors";
 import { TrustWalletAssetInfo } from "./types/trustwalletAssetInfo";
 import { Asset } from "./types/asset";
 
-const stringify = require("json-stable-stringify");
-const inquirer = require("inquirer");
-const fs = require("fs");
-const path = require("path");
+import stringify = require("json-stable-stringify");
+import inquirer = require("inquirer");
+import fs = require("fs");
+import path = require("path");
 
 const MANUAL_CHOICE = "Enter Manually:";
 
@@ -142,7 +143,7 @@ const main = async () => {
     console.log(`Wrote file ${assetInfoFilePath}`);
     console.log(
       !trustWalletAssetLogoExists
-        ? `Now please add logo for this asset at ${logoFilePath}\n`
+        ? `Now please add logo for this asset at ${logoFilePath}\nAnd then run "yarn aggregate" afterwards\n`
         : "",
     );
   }
