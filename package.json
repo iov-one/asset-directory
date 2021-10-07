@@ -1,15 +1,17 @@
 {
-  "name": "@iov/asset-directory",
-  "version": "3.2.2",
+  "name": "test-projectt",
+  "version": "1.0.1",
   "description": "Metadata for crypto assets",
-  "repository": "https://github.com/iov-one/asset-directory.git",
+  "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": [
     "dist/",
     "*.md",
     "assets.json"
   ],
-  "author": "https://github.com/orgs/UCRegistry/teams/maintainers",
+  "contributors": [
+    "Jatin Sarda <jatin@iov.one>"
+  ],
   "license": "Apache-2.0",
   "publishConfig": {
     "access": "public"
