@@ -1,0 +1,7 @@
+{
+  "logo": "trustwallet/assets/blockchains/bitcoincash/info/logo.png",
+  "name": "Bitcoin Cash",
+  "starname-uri": "asset:bch",
+  "symbol": "BCH",
+  "trustwallet-uid": "c145"
+}
