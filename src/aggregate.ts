@@ -39,6 +39,6 @@ if (!fs.existsSync(generatedAssetsDirPath)) {
 const differences = fileWriter(generatedAssetsDirPath, starnameAssets);
 if (differences.length > 0) {
   console.log(
-    `Successfully added ${differences.map((asset) => asset.symbol).join(",")}!`,
+    `Successfully added (${differences.length}) assets. ${differences.map((asset) => asset.symbol).join(",")}!`,
   );
 }

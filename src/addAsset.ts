@@ -105,7 +105,7 @@ const main = async () => {
               type: "confirm",
               name: "confirmation",
               message:
-                "Beware! You are about to add a abandoned asset by TrustWallet, we won't be able to support trust wallet payments for this asset on our application.\nDo you still want to continue",
+                "Beware! You are about to add an abandoned asset by TrustWallet, we won't be able to support trust wallet payments for this asset on our application.\nDo you still want to continue",
             },
           ])
         : null;
