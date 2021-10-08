@@ -36,7 +36,7 @@ const main = async () => {
       {
         type: "input",
         name: "symbolInput",
-        message: "Enter symbol of the token:",
+        message: "Enter symbol of the token or Ctrl-c to quit:",
       },
     ]);
     const symbol = symbolInput.toLowerCase();
