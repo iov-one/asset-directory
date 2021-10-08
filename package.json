@@ -1,6 +1,6 @@
 {
   "name": "@iov/asset-directory",
-  "version": "3.2.2",
+  "version": "4.0.0",
   "description": "Metadata for crypto assets",
   "repository": "https://github.com/iov-one/asset-directory.git",
   "main": "dist/index.js",
@@ -34,9 +34,9 @@
     }
   },
   "scripts": {
-    "aggregate": "ts-node src/aggregate.ts",
     "add-asset": "ts-node src/addAsset.ts",
-    "build": "rm -rf ./dist && tsc && cp ./src/starname/assets.json ./dist",
+    "aggregate": "ts-node src/aggregate.ts",
+    "build": "rm -rf ./dist && tsc",
     "formatPrettier": "yarn prettier --write --loglevel warn './**/*{js, json, md}'"
   },
   "dependencies": {
