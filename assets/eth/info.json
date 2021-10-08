@@ -1,0 +1,7 @@
+{
+  "logo": "trustwallet/assets/blockchains/ethereum/info/logo.png",
+  "name": "Ethereum",
+  "starname-uri": "asset:eth",
+  "symbol": "ETH",
+  "trustwallet-uid": "c60"
+}

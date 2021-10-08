@@ -1,0 +1,7 @@
+{
+  "logo": "trustwallet/assets/blockchains/bitcoin/info/logo.png",
+  "name": "Bitcoin",
+  "starname-uri": "asset:btc",
+  "symbol": "BTC",
+  "trustwallet-uid": "c0"
+}

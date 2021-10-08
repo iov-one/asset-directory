@@ -1,38 +1,46 @@
 {
   "name": "@iov/asset-directory",
-  "version": "3.2.2",
+  "version": "4.0.0",
   "description": "Metadata for crypto assets",
   "repository": "https://github.com/iov-one/asset-directory.git",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "files": [
-    "assets.json",
-    "index.js",
-    "starname/assets.json"
+    "dist/",
+    "*.md"
   ],
-  "author": "https://github.com/orgs/UCRegistry/teams/maintainers",
+  "contributors": [
+    "Jatin Sarda <jatin@iov.one>"
+  ],
   "license": "Apache-2.0",
   "publishConfig": {
     "access": "public"
   },
   "devDependencies": {
     "@cosmjs/encoding": "^0.23.0",
+    "@types/inquirer": "^8.1.3",
+    "@types/json-stable-stringify": "^1.0.33",
+    "@types/node": "^16.10.3",
     "husky": "^4.3.0",
     "json-stable-stringify": "^1.0.1",
-    "node-fetch": "^2.6.1",
-    "prettier": "2.1.2"
+    "prettier": "2.1.2",
+    "ts-node": "^10.2.1",
+    "tslib": "^2.3.1",
+    "typescript": "^4.4.3"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "yarn verify && yarn format",
-      "pre-push": "yarn verify && yarn aggregate && git diff --exit-code assets.json || ( echo '*** You need to commit assets.json. ***' ; false )"
+      "pre-push": "yarn aggregate && yarn build"
     }
   },
   "scripts": {
-    "aggregate": "node aggregate.js",
-    "add-asset": "node asset.js",
-    "remove-asset": "node remove.js && yarn aggregate",
-    "format": "node format.js",
-    "verify": "node verify.js",
+    "add-asset": "ts-node src/addAsset.ts",
+    "aggregate": "ts-node src/aggregate.ts",
+    "build": "rm -rf ./dist && tsc",
     "formatPrettier": "yarn prettier --write --loglevel warn './**/*{js, json, md}'"
   },
-  "dependencies": {}
+  "dependencies": {
+    "axios": "^0.22.0",
+    "inquirer": "^8.2.0"
+  }
 }
