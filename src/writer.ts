@@ -12,7 +12,7 @@ const fileWriter = (
   fs.writeFileSync(
     `${fileDir}/assets.json`,
     stringify(
-      assets.sort((a, b) => a.symbol.localeCompare(b.symbol)),
+      assets.sort((a, b) => a.symbol.localeCompare(b.symbol, "en")),
       { space: "  " },
     ) + "\n",
   );
@@ -20,7 +20,7 @@ const fileWriter = (
     `${fileDir}/assets.ts`,
     "export default " +
       stringify(
-        assets.sort((a, b) => a.symbol.localeCompare(b.symbol)),
+        assets.sort((a, b) => a.symbol.localeCompare(b.symbol, "en")),
         { space: "  " },
       ) +
       "\n",
