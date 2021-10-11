@@ -1,5 +1,4 @@
 import axios from "axios";
-import { exec } from "child_process";
 import { TrustWalletCoin } from "./types/trustwalletCoin";
 import { CoinGeckoCoin } from "./types/coingeckoCoin";
 import config from "./config";
@@ -13,6 +12,22 @@ import fs = require("fs");
 import path = require("path");
 
 const MANUAL_CHOICE = "Enter Manually:";
+
+const calculateChoices = (
+  coinGeckoCoins: ReadonlyArray<CoinGeckoCoin>,
+  trustwalletAsset: TrustWalletAssetInfo | null,
+): ReadonlyArray<string> => {
+  const coinGeckoCoinNames = coinGeckoCoins.map((_coin) => _coin.name);
+  if (!trustwalletAsset) {
+    return [...coinGeckoCoinNames];
+  }
+  const found = coinGeckoCoinNames.find(
+    (_coinName) => _coinName === trustwalletAsset.name,
+  );
+  return found
+    ? [...coinGeckoCoinNames]
+    : [trustwalletAsset.name, ...coinGeckoCoinNames];
+};
 
 const main = async () => {
   console.log("Initializing...");
@@ -45,11 +60,14 @@ const main = async () => {
     if (fs.existsSync(path.join("assets", symbol)))
       throw new Error(Errors.ALREADY_EXISTS);
 
-    // coin must exist on coingecko, check beforehand
-    const foundCoinGeckoCoin = coinGeckoCoins.find(
-      (_coin) => _coin.symbol === symbol,
+    // provide all possible suggestion
+    const matchingCoinGeckoCoins = coinGeckoCoins.filter(
+      (_coin) =>
+        _coin.symbol.toLowerCase() === symbol ||
+        _coin.symbol.toUpperCase() === symbol,
     );
-    if (!foundCoinGeckoCoin) {
+    // coin must exist on coingecko, check beforehand
+    if (matchingCoinGeckoCoins.length === 0) {
       throw new Error(Errors.NOT_FOUND_COINGECKO);
     }
     // check for symbol in trust registry
@@ -78,12 +96,10 @@ const main = async () => {
         name: "nameInput",
         type: "list",
         message: "Choose asset name",
-        choices: trustWalletAsset
-          ? // check if names are same on coingecko and trustregistry
-            foundCoinGeckoCoin.name === trustWalletAsset.name
-            ? [foundCoinGeckoCoin.name, MANUAL_CHOICE]
-            : [foundCoinGeckoCoin.name, trustWalletAsset.name, MANUAL_CHOICE]
-          : [foundCoinGeckoCoin.name, MANUAL_CHOICE],
+        choices: [
+          ...calculateChoices(matchingCoinGeckoCoins, trustWalletAsset),
+          MANUAL_CHOICE,
+        ],
       },
     ]);
     // inquire manual asset name for asset info use ( this will have max precedence)
