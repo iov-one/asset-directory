@@ -3,5 +3,6 @@
   "name": "Sifchain",
   "starname-uri": "asset:rowan",
   "symbol": "ROWAN",
-  "trustwallet-uid": null
+  "trustwallet-uid": null,
+  "coingeckoId": "sifchain"
 }

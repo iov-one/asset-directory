@@ -1,4 +1,5 @@
 {
+  "coingeckoId": "tether",
   "logo": "assets/usdt/logo.png",
   "name": "Tether",
   "starname-uri": "asset:usdt",

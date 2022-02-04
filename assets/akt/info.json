@@ -3,5 +3,6 @@
   "name": "Akash",
   "starname-uri": "asset:akt",
   "symbol": "AKT",
-  "trustwallet-uid": null
+  "trustwallet-uid": null,
+  "coingeckoId": "akash-network"
 }

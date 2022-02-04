@@ -1,4 +1,5 @@
 {
+  "coingeckoId": "osmosis",
   "logo": "assets/osmo/logo.png",
   "name": "Osmosis",
   "starname-uri": "asset:osmo",

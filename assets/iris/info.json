@@ -1,4 +1,5 @@
 {
+  "coingeckoId": "iris-network",
   "logo": "assets/iris/logo.png",
   "name": "IRISnet",
   "starname-uri": "asset:iris",

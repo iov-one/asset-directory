@@ -3,5 +3,6 @@
   "name": "Cardano",
   "starname-uri": "asset:ada",
   "symbol": "ADA",
-  "trustwallet-uid": "c1815"
+  "trustwallet-uid": "c1815",
+  "coingeckoId": "cardano"
 }
