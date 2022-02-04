@@ -1,4 +1,5 @@
 {
+  "coingeckoId": "chainlink",
   "logo": "assets/link/logo.png",
   "name": "Chainlink",
   "starname-uri": "asset:link",

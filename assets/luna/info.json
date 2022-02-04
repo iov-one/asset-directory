@@ -1,4 +1,5 @@
 {
+  "coingeckoId": "terra-luna",
   "logo": "trustwallet/assets/blockchains/terra/info/logo.png",
   "name": "Terra",
   "starname-uri": "asset:luna",

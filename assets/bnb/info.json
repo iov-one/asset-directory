@@ -3,5 +3,6 @@
   "name": "BNB coin",
   "starname-uri": "asset:bnb",
   "symbol": "BNB",
-  "trustwallet-uid": "c714"
+  "trustwallet-uid": "c714",
+  "coingeckoId": "binancecoin"
 }

@@ -1,4 +1,5 @@
 {
+  "coingeckoId": "starname",
   "logo": "assets/iov/logo.png",
   "name": "Starname (IOV)",
   "starname-uri": "asset:iov",

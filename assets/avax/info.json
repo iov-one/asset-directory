@@ -3,5 +3,6 @@
   "name": "Avalanche",
   "starname-uri": "asset:avax",
   "symbol": "AVAX",
-  "trustwallet-uid": "c10009000"
+  "trustwallet-uid": "c10009000",
+  "coingeckoId": "avalanche-2"
 }

@@ -4,5 +4,5 @@ export interface Asset {
   logo: string;
   "starname-uri": string;
   "trustwallet-uid": string | null;
-  coingeckoId: string;
+  coingeckoId: string | null;
 }

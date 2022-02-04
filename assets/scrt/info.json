@@ -1,4 +1,5 @@
 {
+  "coingeckoId": "secret",
   "logo": "assets/scrt/logo.png",
   "name": "Secret",
   "starname-uri": "asset:scrt",

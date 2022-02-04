@@ -1,4 +1,5 @@
 {
+  "coingeckoId": "polkadot",
   "logo": "trustwallet/assets/blockchains/polkadot/info/logo.png",
   "name": "Polkadot",
   "starname-uri": "asset:dot",

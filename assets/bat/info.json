@@ -3,5 +3,6 @@
   "name": "Basic Attention Token",
   "starname-uri": "asset:bat",
   "symbol": "BAT",
-  "trustwallet-uid": null
+  "trustwallet-uid": null,
+  "coingeckoId": "basic-attention-token"
 }

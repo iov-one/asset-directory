@@ -1,4 +1,5 @@
 {
+  "coingeckoId": "dash",
   "logo": "trustwallet/assets/blockchains/dash/info/logo.png",
   "name": "Dash",
   "starname-uri": "asset:dash",

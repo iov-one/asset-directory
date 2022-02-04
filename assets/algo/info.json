@@ -3,5 +3,6 @@
   "name": "Algorand",
   "starname-uri": "asset:algo",
   "symbol": "ALGO",
-  "trustwallet-uid": "c283"
+  "trustwallet-uid": "c283",
+  "coingeckoId": "algorand"
 }

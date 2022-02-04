@@ -1,4 +1,5 @@
 {
+  "coingeckoId": "monero",
   "logo": "assets/xmr/logo.png",
   "name": "Monero",
   "starname-uri": "asset:xmr",

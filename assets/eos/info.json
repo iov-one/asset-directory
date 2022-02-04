@@ -1,4 +1,5 @@
 {
+  "coingeckoId": "eos",
   "logo": "trustwallet/assets/blockchains/eos/info/logo.png",
   "name": "EOS",
   "starname-uri": "asset:eos",

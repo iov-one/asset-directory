@@ -1,4 +1,5 @@
 {
+  "coingeckoId": "usd-coin",
   "logo": "assets/usdc/logo.png",
   "name": "USD Coin",
   "starname-uri": "asset:usdc",

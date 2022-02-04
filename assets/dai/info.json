@@ -1,4 +1,5 @@
 {
+  "coingeckoId": "dai",
   "logo": "assets/dai/logo.png",
   "name": "Dai Stablecoin",
   "starname-uri": "asset:dai",
