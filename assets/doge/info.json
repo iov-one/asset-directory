@@ -1,4 +1,5 @@
 {
+  "coingeckoId": "dogecoin",
   "logo": "trustwallet/assets/blockchains/doge/info/logo.png",
   "name": "Dogecoin",
   "starname-uri": "asset:doge",

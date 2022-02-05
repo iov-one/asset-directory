@@ -1,4 +1,5 @@
 {
+  "coingeckoId": "tron",
   "logo": "trustwallet/assets/blockchains/tron/info/logo.png",
   "name": "TRON",
   "starname-uri": "asset:trx",

@@ -3,5 +3,6 @@
   "name": "FLIX",
   "starname-uri": "asset:flix",
   "symbol": "FLIX",
-  "trustwallet-uid": null
+  "trustwallet-uid": null,
+  "coingeckoId": null
 }

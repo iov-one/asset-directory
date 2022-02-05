@@ -1,4 +1,5 @@
 {
+  "coingeckoId": "litecoin",
   "logo": "trustwallet/assets/blockchains/litecoin/info/logo.png",
   "name": "Litecoin",
   "starname-uri": "asset:ltc",

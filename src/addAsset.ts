@@ -10,23 +10,47 @@ import stringify = require("json-stable-stringify");
 import inquirer = require("inquirer");
 import fs = require("fs");
 import path = require("path");
+import { CoinChoice } from "./types/coinChoice";
 
 const MANUAL_CHOICE = "Enter Manually:";
 
-const calculateChoices = (
+const toCoinChoiceArray = (
+  coins: ReadonlyArray<CoinGeckoCoin>,
+  showId = false,
+): ReadonlyArray<CoinChoice> => {
+  return coins.map((coin) => {
+    return {
+      name: showId ? `${coin.name} [id: ${coin.id}]` : coin.name,
+      value: coin,
+    };
+  });
+};
+// suggest choices for name
+// pricing coin is fallback coingeckoId for coins not coming from coingecko ( ex: trustwallet assets)
+const suggestChoices = (
   coinGeckoCoins: ReadonlyArray<CoinGeckoCoin>,
   trustwalletAsset: TrustWalletAssetInfo | null,
-): ReadonlyArray<string> => {
-  const coinGeckoCoinNames = coinGeckoCoins.map((_coin) => _coin.name);
+  pricingCoin: CoinGeckoCoin,
+): ReadonlyArray<CoinChoice> => {
   if (!trustwalletAsset) {
-    return [...coinGeckoCoinNames];
+    return toCoinChoiceArray(coinGeckoCoins);
   }
-  const found = coinGeckoCoinNames.find(
-    (_coinName) => _coinName === trustwalletAsset.name,
+  const found = coinGeckoCoins.find(
+    (_coin) => _coin.name === trustwalletAsset.name,
   );
   return found
-    ? [...coinGeckoCoinNames]
-    : [trustwalletAsset.name, ...coinGeckoCoinNames];
+    ? toCoinChoiceArray(coinGeckoCoins)
+    : [
+        {
+          name: trustwalletAsset.name,
+          value: {
+            id: pricingCoin.id,
+            symbol: pricingCoin.symbol,
+            name: trustwalletAsset.name,
+          },
+        },
+        ...toCoinChoiceArray(coinGeckoCoins),
+      ];
 };
 
 const main = async () => {
@@ -60,7 +84,7 @@ const main = async () => {
     if (fs.existsSync(path.join("assets", symbol)))
       throw new Error(Errors.ALREADY_EXISTS);
 
-    // provide all possible suggestion
+    // all possible matching coingecko coins with symbol
     const matchingCoinGeckoCoins = coinGeckoCoins.filter(
       (_coin) =>
         _coin.symbol.toLowerCase() === symbol ||
@@ -90,14 +114,30 @@ const main = async () => {
       trustWalletAssetFile && fs.existsSync(trustWalletAssetFile)
         ? JSON.parse(fs.readFileSync(trustWalletAssetFile, "utf-8"))
         : null;
+
+    // make user select the exact coin from coingecko first for pricing purpose
+    // this can serve as pricing coin for trustwallet assets
+    const { chosenPricingCoin } = await inquirer.prompt([
+      {
+        name: "chosenPricingCoin",
+        type: "list",
+        choices: toCoinChoiceArray(matchingCoinGeckoCoins, true),
+        message: "Choose best matching coin",
+      },
+    ]);
     // use asset name from trustwallet files instead of registry ( give precedence)
+    // names can be different too
     const { nameInput } = await inquirer.prompt([
       {
         name: "nameInput",
         type: "list",
         message: "Choose asset name",
         choices: [
-          ...calculateChoices(matchingCoinGeckoCoins, trustWalletAsset),
+          ...suggestChoices(
+            matchingCoinGeckoCoins,
+            trustWalletAsset,
+            chosenPricingCoin,
+          ),
           MANUAL_CHOICE,
         ],
       },
@@ -139,7 +179,7 @@ const main = async () => {
 
     const asset: Asset = {
       symbol: upperCasedSymbol,
-      name: manualInput ? manualInput["assetName"] : nameInput,
+      name: manualInput ? manualInput["assetName"] : nameInput.name,
       logo: trustWalletAssetLogoExists
         ? trustWalletAssetFile.replace("info.json", "logo.png")
         : logoFilePath,
@@ -148,6 +188,7 @@ const main = async () => {
         foundTrustRegistryCoin && !abandonedAsset
           ? `c${foundTrustRegistryCoin.coinId}`
           : null,
+      coingeckoId: chosenPricingCoin.id,
     };
     // create directory and write info file for this asset
     fs.mkdirSync(path.join("assets", symbol), { recursive: true });

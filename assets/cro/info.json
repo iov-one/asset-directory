@@ -1,4 +1,5 @@
 {
+  "coingeckoId": "crypto-com-chain",
   "logo": "trustwallet/assets/blockchains/cryptoorg/info/logo.png",
   "name": "Crypto.org",
   "starname-uri": "asset:cro",

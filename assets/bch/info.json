@@ -3,5 +3,6 @@
   "name": "Bitcoin Cash",
   "starname-uri": "asset:bch",
   "symbol": "BCH",
-  "trustwallet-uid": "c145"
+  "trustwallet-uid": "c145",
+  "coingeckoId": "bitcoin-cash"
 }

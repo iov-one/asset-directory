@@ -1,4 +1,5 @@
 {
+  "coingeckoId": "stellar",
   "logo": "trustwallet/assets/blockchains/stellar/info/logo.png",
   "name": "Stellar",
   "starname-uri": "asset:xlm",

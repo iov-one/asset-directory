@@ -3,5 +3,6 @@
   "name": "Band Protocol",
   "starname-uri": "asset:band",
   "symbol": "BAND",
-  "trustwallet-uid": "c494"
+  "trustwallet-uid": "c494",
+  "coingeckoId": "band-protocol"
 }

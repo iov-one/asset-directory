@@ -1,4 +1,5 @@
 {
+  "coingeckoId": "compound-governance-token",
   "logo": "assets/comp/logo.png",
   "name": "Compound",
   "starname-uri": "asset:comp",

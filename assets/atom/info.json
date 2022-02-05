@@ -3,5 +3,6 @@
   "name": "Cosmos",
   "starname-uri": "asset:atom",
   "symbol": "ATOM",
-  "trustwallet-uid": "c118"
+  "trustwallet-uid": "c118",
+  "coingeckoId": "cosmos"
 }

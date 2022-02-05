@@ -1,7 +1,9 @@
 {
-  "logo": "trustwallet/assets/blockchains/zcash/info/logo.png",
-  "name": "Zcash",
-  "starname-uri": "asset:zec",
-  "symbol": "ZEC",
-  "trustwallet-uid": "c133"
-}
+    "coingeckoId": "zcash",
+    "logo": "trustwallet/assets/blockchains/zcash/info/logo.png",
+    "name": "Zcash",
+    "starname-uri": "asset:zec",
+    "symbol": "ZEC",
+    "trustwallet-uid": "c133"
+  }
+  
