@@ -1,0 +1,8 @@
+{
+  "coingeckoId": "likecoin",
+  "logo": "assets/like/logo.png",
+  "name": "LikeCoin",
+  "starname-uri": "asset:like",
+  "symbol": "LIKE",
+  "trustwallet-uid": null
+}
