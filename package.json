@@ -37,6 +37,7 @@
     "add-asset": "ts-node src/addAsset.ts",
     "aggregate": "ts-node src/aggregate.ts",
     "build": "rm -rf ./dist && tsc",
+    "deploy": "yarn build && yarn publish",
     "formatPrettier": "yarn prettier --write --loglevel warn './**/*{js, json, md}'"
   },
   "dependencies": {
