@@ -1,0 +1,8 @@
+{
+  "coingeckoId": "evmos",
+  "logo": "assets/evmos/logo.png",
+  "name": "Evmos",
+  "starname-uri": "asset:evmos",
+  "symbol": "EVMOS",
+  "trustwallet-uid": "c10009001"
+}
