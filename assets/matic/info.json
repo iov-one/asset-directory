@@ -1,0 +1,8 @@
+{
+  "coingeckoId": "matic-network",
+  "logo": "trustwallet/assets/blockchains/polygon/info/logo.png",
+  "name": "Polygon",
+  "starname-uri": "asset:matic",
+  "symbol": "MATIC",
+  "trustwallet-uid": "c966"
+}
