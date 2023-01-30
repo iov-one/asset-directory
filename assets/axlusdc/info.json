@@ -1,0 +1,8 @@
+{
+  "coingeckoId": "axlusdc",
+  "logo": "assets/axlusdc/logo.png",
+  "name": "Axelar USDC",
+  "starname-uri": "asset:axlusdc",
+  "symbol": "AXLUSDC",
+  "trustwallet-uid": null
+}

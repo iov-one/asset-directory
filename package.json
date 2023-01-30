@@ -1,6 +1,6 @@
 {
   "name": "@iov/asset-directory",
-  "version": "4.2.5",
+  "version": "4.2.6",
   "description": "Metadata for crypto assets",
   "repository": "https://github.com/iov-one/asset-directory.git",
   "main": "dist/index.js",
